@@ -31,6 +31,7 @@
 		"editor.foreground": "#DEEEF3",
 		"editor.lineHighlightBackground": "#B3DCE20D",
 		"editor.selectionBackground": "#B3DCE211",
+		"editor.wordHighlightBackground": "#B3DCE233",
 		"editorCodeLens.foreground": "#B3DCE255",
 		"editorError.foreground": "#DC9E8F",
 		"editorGroup.border": "#B3DCE214",
