@@ -66,6 +66,7 @@
 		"list.hoverBackground": "#B3DCE211",
 		"list.inactiveSelectionBackground": "#B3DCE222",
 		"list.warningForeground": "#E7BEA6",
+		"menu.background": "#232B2E",
 		"minimap.errorHighlight": "#DC9E8F",
 		"minimap.findMatchHighlight": "#66B9D277",
 		"minimap.selectionHighlight": "#B3DCE211",
