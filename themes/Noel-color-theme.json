@@ -71,6 +71,8 @@
 		"tab.inactiveBackground": "#232B2E",
 		"tab.inactiveForeground": "#666F72",
 		"terminal.ansiBlack": "#2A3235",
+		"panelTitle.inactiveForeground": "#666F72",
+		"panelTitle.activeForeground": "#DEEEF3",
 		"terminal.ansiBlue": "#66B9D2",
 		"terminal.ansiBrightBlack": "#666F72",
 		"terminal.ansiBrightBlue": "#66B9D2",
