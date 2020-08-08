@@ -52,6 +52,7 @@
 		"editorOverviewRuler.warningForeground": "#E7BEA6",
 		"editorWarning.foreground": "#E7BEA6",
 		"editorWidget.background": "#252B2D",
+		"editorCodeLens.foreground": "#B3DCE255",
 		"editorWidget.border": "#B3DCE214",
 		"errorForeground": "#DC9E8F",
 		"focusBorder": "#00000000",
