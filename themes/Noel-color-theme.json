@@ -115,7 +115,7 @@
 		"textLink.foreground": "#66B9D2",
 		"titleBar.activeBackground": "#232B2E",
 		"titleBar.inactiveBackground": "#232B2E",
-		"window.activeBorder": "#B3DCE214",
+		"window.activeBorder": "#B3DCE214"
 	},
 	"semanticHighlighting": true,
 	"semanticTokenColors": {
