@@ -81,6 +81,7 @@
 		"problemsErrorIcon.foreground": "#DC9E8F",
 		"problemsWarningIcon.foreground": "#E7BEA6",
 		"rust_analyzer.inlayHint": "#666F72",
+		"scrollbarSlider.background": "#B3DCE222",
 		"sideBar.background": "#232B2E",
 		"sideBar.border": "#B3DCE214",
 		"statusBar.background": "#232B2E",
