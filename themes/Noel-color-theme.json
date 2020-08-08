@@ -53,6 +53,7 @@
 		"editorOverviewRuler.modifiedForeground": "#E7BEA6",
 		"editorOverviewRuler.warningForeground": "#E7BEA6",
 		"editorWarning.foreground": "#E7BEA6",
+		"editorWhitespace.foreground": "#B3DCE222",
 		"editorWidget.background": "#252B2D",
 		"editorWidget.border": "#B3DCE214",
 		"errorForeground": "#DC9E8F",
