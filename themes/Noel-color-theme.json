@@ -3,7 +3,7 @@
 // Darker background: #252B2D
 // Foreground: #DEEEF3
 // Darker foreground: #DEEEF3BB
-// Faded: #B3DCE255
+// Faded: #B3DCE255 or #526B6F where translucency is not allowed
 // Pink: #EEB9C1
 // Blue: #66B9D2
 // Light blue: #B3DCE2
@@ -116,7 +116,7 @@
 		"tab.inactiveForeground": "#B3DCE255",
 		"terminal.ansiBlack": "#2A3235",
 		"terminal.ansiBlue": "#66B9D2",
-		"terminal.ansiBrightBlack": "#B3DCE255",
+		"terminal.ansiBrightBlack": "#526B6F",
 		"terminal.ansiBrightBlue": "#66B9D2",
 		"terminal.ansiBrightCyan": "#B3DCE2",
 		"terminal.ansiBrightGreen": "#8BB993",
