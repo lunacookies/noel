@@ -53,7 +53,7 @@
 		"editorWidget.background": "#252B2D",
 		"editorWidget.border": "#B3DCE214",
 		"errorForeground": "#DC9E8F",
-		"focusBorder": "#666F72",
+		"focusBorder": "#00000000",
 		"foreground": "#DEEEF3",
 		"gitDecoration.addedResourceForeground": "#8BB993",
 		"gitDecoration.deletedResourceForeground": "#DC9E8F",
