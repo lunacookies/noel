@@ -19,6 +19,7 @@
 		"activityBar.inactiveForeground": "#666F72",
 		"activityBarBadge.background": "#B3DCE2",
 		"activityBarBadge.foreground": "#232B2E",
+		"badge.background": "#B3DCE233",
 		"debugToolBar.background": "#232B2E",
 		"diffEditor.insertedTextBackground": "#8BB99322",
 		"diffEditor.removedTextBackground": "#DC9E8F22",
