@@ -1,3 +1,12 @@
+// Palette:
+// Background: #2A3235
+// Darker background: #232B2E
+// Foreground: #DEEEF3
+// Darker foreground: #B9C3C6
+// Faded: #666F72
+// Pink: #EEB9C1
+// Blue: #66B9D2
+// Light blue: #B3DCE2
 {
 	"name": "Noel",
 	"type": "dark",
