@@ -134,6 +134,7 @@
 		"terminal.foreground": "#DEEEF3",
 		"textLink.activeForeground": "#66B9D2",
 		"textLink.foreground": "#66B9D2",
+		"textPreformat.foreground": "#EEB9C1", // Inline code on e.g. Settings page
 		"titleBar.activeBackground": "#252B2D",
 		"titleBar.inactiveBackground": "#252B2D",
 		"window.activeBorder": "#B3DCE214"
