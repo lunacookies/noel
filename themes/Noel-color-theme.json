@@ -101,6 +101,7 @@
 		"problemsWarningIcon.foreground": "#E7BEA6",
 		"rust_analyzer.inlayHint": "#B3DCE255",
 		"scrollbarSlider.background": "#B3DCE222",
+		"selection.background": "#B3DCE244",
 		"settings.headerForeground": "#DEEEF3",
 		"sideBar.background": "#252B2D",
 		"sideBar.border": "#B3DCE214",
