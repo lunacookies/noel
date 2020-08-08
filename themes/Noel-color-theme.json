@@ -129,7 +129,10 @@
 		"class": "#B3DCE2",
 		"struct": "#B3DCE2",
 		"enum": "#B3DCE2",
-		"enumMember": "#B3DCE2",
+		"enumMember": {
+			"foreground": "#B3DCE2",
+			"italic": true
+		},
 		"interface": "#B3DCE2",
 		"typeAlias": "#B3DCE2",
 		"typeParameter": "#B3DCE2",
@@ -138,7 +141,10 @@
 		"namespace": "#DEEEF3",
 		"number": "#66B9D2",
 		"string": "#66B9D2",
-		"comment": "#666F72",
+		"comment": {
+			"foreground": "#666F72",
+			"italic": true
+		},
 		"punctuation": "#B9C3C6",
 		"operator": "#B9C3C6"
 	},
@@ -175,11 +181,17 @@
 		{
 			"scope": [
 				"entity.name.type",
-				"entity.name.variable.enum-member",
 				"keyword.type"
 			],
 			"settings": {
 				"foreground": "#B3DCE2"
+			}
+		},
+		{
+			"scope": "entity.name.variable.enum-member",
+			"settings": {
+				"foreground": "#B3DCE2",
+				"fontStyle": "italic"
 			}
 		},
 		{
@@ -213,7 +225,8 @@
 				"punctuation.definition.comment"
 			],
 			"settings": {
-				"foreground": "#666F72"
+				"foreground": "#666F72",
+				"fontStyle": "italic"
 			}
 		}
 	]
