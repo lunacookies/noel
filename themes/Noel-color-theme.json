@@ -2,8 +2,8 @@
 // Background: #2A3235
 // Darker background: #252B2D
 // Foreground: #DEEEF3
-// Darker foreground: #B9C3C6
-// Faded: #666F72
+// Darker foreground: #DEEEF3BB
+// Faded: #B3DCE255
 // Pink: #EEB9C1
 // Blue: #66B9D2
 // Light blue: #B3DCE2
@@ -42,7 +42,7 @@
 		"editorIndentGuide.activeBackground": "#B3DCE222",
 		"editorIndentGuide.background": "#B3DCE211",
 		"editorLineNumber.activeForeground": "#DEEEF3",
-		"editorLineNumber.foreground": "#666F72",
+		"editorLineNumber.foreground": "#B3DCE255",
 		"editorLink.activeForeground": "#66B9D2",
 		"editorOverviewRuler.addedForeground": "#8BB993",
 		"editorOverviewRuler.deletedForeground": "#DC9E8F",
@@ -60,7 +60,7 @@
 		"gitDecoration.deletedResourceForeground": "#DC9E8F",
 		"gitDecoration.modifiedResourceForeground": "#E7BEA6",
 		"input.background": "#B3DCE211",
-		"input.placeholderForeground": "#666F72",
+		"input.placeholderForeground": "#B3DCE255",
 		"list.activeSelectionBackground": "#B3DCE233",
 		"list.activeSelectionForeground": "#DEEEF3",
 		"list.errorForeground": "#DC9E8F",
@@ -79,10 +79,10 @@
 		"minimapGutter.modifiedBackground": "#E7BEA6",
 		"panel.border": "#B3DCE214",
 		"panelTitle.activeForeground": "#DEEEF3",
-		"panelTitle.inactiveForeground": "#666F72",
+		"panelTitle.inactiveForeground": "#B3DCE255",
 		"problemsErrorIcon.foreground": "#DC9E8F",
 		"problemsWarningIcon.foreground": "#E7BEA6",
-		"rust_analyzer.inlayHint": "#666F72",
+		"rust_analyzer.inlayHint": "#B3DCE255",
 		"scrollbarSlider.background": "#B3DCE222",
 		"sideBar.background": "#252B2D",
 		"sideBar.border": "#B3DCE214",
@@ -90,16 +90,16 @@
 		"statusBar.background": "#252B2D",
 		"statusBar.border": "#B3DCE214",
 		"statusBar.debuggingBackground": "#252B2D",
-		"statusBar.foreground": "#666F72",
+		"statusBar.foreground": "#B3DCE255",
 		"statusBar.noFolderBackground": "#252B2D",
 		"tab.activeBackground": "#2A3235",
 		"tab.activeForeground": "#DEEEF3",
 		"tab.border": "#B3DCE214",
 		"tab.inactiveBackground": "#252B2D",
-		"tab.inactiveForeground": "#666F72",
+		"tab.inactiveForeground": "#B3DCE255",
 		"terminal.ansiBlack": "#2A3235",
 		"terminal.ansiBlue": "#66B9D2",
-		"terminal.ansiBrightBlack": "#666F72",
+		"terminal.ansiBrightBlack": "#B3DCE255",
 		"terminal.ansiBrightBlue": "#66B9D2",
 		"terminal.ansiBrightCyan": "#B3DCE2",
 		"terminal.ansiBrightGreen": "#8BB993",
@@ -144,11 +144,11 @@
 		"number": "#66B9D2",
 		"string": "#66B9D2",
 		"comment": {
-			"foreground": "#666F72",
+			"foreground": "#B3DCE255",
 			"italic": true
 		},
-		"punctuation": "#B9C3C6",
-		"operator": "#B9C3C6"
+		"punctuation": "#DEEEF3BB",
+		"operator": "#DEEEF3BB"
 	},
 	"tokenColors": [
 		{
@@ -218,7 +218,7 @@
 				"keyword.operator"
 			],
 			"settings": {
-				"foreground": "#B9C3C6"
+				"foreground": "#DEEEF3BB"
 			}
 		},
 		{
@@ -227,7 +227,7 @@
 				"punctuation.definition.comment"
 			],
 			"settings": {
-				"foreground": "#666F72",
+				"foreground": "#B3DCE255",
 				"fontStyle": "italic"
 			}
 		}
