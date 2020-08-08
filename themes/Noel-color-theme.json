@@ -7,6 +7,7 @@
 		"activityBar.inactiveForeground": "#666F72",
 		"activityBarBadge.background": "#B3DCE2",
 		"activityBarBadge.foreground": "#232B2E",
+		"debugToolBar.background": "#232B2E",
 		"editor.background": "#2A3235",
 		"editor.findMatchBackground": "#66B9D277",
 		"editor.findMatchHighlightBackground": "#66B9D244",
