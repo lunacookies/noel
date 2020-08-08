@@ -86,6 +86,7 @@
 		"scrollbarSlider.background": "#B3DCE222",
 		"sideBar.background": "#252B2D",
 		"sideBar.border": "#B3DCE214",
+		"sideBarSectionHeader.background": "#B3DCE211",
 		"statusBar.background": "#252B2D",
 		"statusBar.border": "#B3DCE214",
 		"statusBar.debuggingBackground": "#252B2D",
