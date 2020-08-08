@@ -23,7 +23,7 @@
 		"debugToolBar.background": "#252B2D",
 		"diffEditor.insertedTextBackground": "#8BB99322",
 		"diffEditor.removedTextBackground": "#DC9E8F22",
-		"dropdown.background": "#B3DCE211",
+		"dropdown.background": "#252B2D",
 		"dropdown.foreground": "#DEEEF3",
 		"editor.background": "#2A3235",
 		"editor.findMatchBackground": "#66B9D277",
