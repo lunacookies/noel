@@ -33,6 +33,7 @@
 		"editor.selectionBackground": "#B3DCE222",
 		"editor.wordHighlightBackground": "#B3DCE233",
 		"editorCodeLens.foreground": "#B3DCE255",
+		"editorCursor.foreground": "#DEEEF3",
 		"editorError.foreground": "#DC9E8F",
 		"editorGroup.border": "#B3DCE214",
 		"editorGroupHeader.noTabsBackground": "#252B2D",
