@@ -140,10 +140,7 @@
 		"string": "#66B9D2",
 		"comment": "#666F72",
 		"punctuation": "#B9C3C6",
-		"operator": "#B9C3C6",
-		"*.declaration": {
-			"italic": true
-		}
+		"operator": "#B9C3C6"
 	},
 	"tokenColors": [
 		{
