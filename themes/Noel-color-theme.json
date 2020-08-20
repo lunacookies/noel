@@ -162,6 +162,7 @@
 			},
 		"punctuation": "#DEEEF3BB",
 		"operator": "#DEEEF3BB",
+		"attribute": "#DEEEF3BB",
 	},
 	"tokenColors": [
 		{

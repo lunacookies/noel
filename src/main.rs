@@ -224,6 +224,7 @@ impl Theme {
 
         write_scope(f, "punctuation", (self.fg, 0xBB))?;
         write_scope(f, "operator", (self.fg, 0xBB))?;
+        write_scope(f, "attribute", (self.fg, 0xBB))?;
 
         writeln!(f, "\t}},")?;
 
