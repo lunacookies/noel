@@ -216,14 +216,14 @@ impl Theme {
         write_scope(
             f,
             "enumMember",
-            Style {
-                color: Some(self.primary_accent.into()),
-                font_style: Some(FontStyle {
+            (
+                self.primary_accent,
+                FontStyle {
                     bold: false,
                     italic: true,
                     underline: false,
-                }),
-            },
+                },
+            ),
         )?;
         write_scope(f, "interface", self.primary_accent)?;
         write_scope(f, "typeAlias", self.primary_accent)?;
@@ -240,14 +240,14 @@ impl Theme {
         write_scope(
             f,
             "comment",
-            Style {
-                color: Some(self.faded.into()),
-                font_style: Some(FontStyle {
+            (
+                self.faded,
+                FontStyle {
                     bold: false,
                     italic: true,
                     underline: false,
-                }),
-            },
+                },
+            ),
         )?;
 
         write_scope(f, "punctuation", (self.fg, 0xBB))?;
@@ -291,14 +291,14 @@ impl Theme {
         write_textmate(
             f,
             &["entity.name.variable.enum-member"],
-            Style {
-                color: Some(self.primary_accent.into()),
-                font_style: Some(FontStyle {
+            (
+                self.primary_accent,
+                FontStyle {
                     bold: false,
                     italic: true,
                     underline: false,
-                }),
-            },
+                },
+            ),
         )?;
 
         write_textmate(f, &["constant.numeric", "string", "punctuation.definition.string"], self.secondary_accent1)?;
@@ -308,14 +308,14 @@ impl Theme {
         write_textmate(
             f,
             &["comment", "punctuation.definition.comment"],
-            Style {
-                color: Some(self.faded.into()),
-                font_style: Some(FontStyle {
+            (
+                self.faded,
+                FontStyle {
                     bold: false,
                     italic: true,
                     underline: false,
-                }),
-            },
+                },
+            ),
         )?;
 
         writeln!(f, "\t],")?;
@@ -379,6 +379,15 @@ impl From<FontStyle> for Style {
     fn from(font_style: FontStyle) -> Self {
         Self {
             color: None,
+            font_style: Some(font_style),
+        }
+    }
+}
+
+impl<C: Into<Color>> From<(C, FontStyle)> for Style {
+    fn from((color, font_style): (C, FontStyle)) -> Self {
+        Self {
+            color: Some(color.into()),
             font_style: Some(font_style),
         }
     }
