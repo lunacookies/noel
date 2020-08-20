@@ -213,18 +213,7 @@ impl Theme {
         write_scope(f, "class", self.primary_accent)?;
         write_scope(f, "struct", self.primary_accent)?;
         write_scope(f, "enum", self.primary_accent)?;
-        write_scope(
-            f,
-            "enumMember",
-            (
-                self.primary_accent,
-                FontStyle {
-                    bold: false,
-                    italic: true,
-                    underline: false,
-                },
-            ),
-        )?;
+        write_scope(f, "enumMember", (self.primary_accent, FontStyle::Italic))?;
         write_scope(f, "interface", self.primary_accent)?;
         write_scope(f, "typeAlias", self.primary_accent)?;
         write_scope(f, "typeParameter", self.primary_accent)?;
@@ -237,32 +226,13 @@ impl Theme {
         write_scope(f, "number", self.secondary_accent1)?;
         write_scope(f, "string", self.secondary_accent1)?;
 
-        write_scope(
-            f,
-            "comment",
-            (
-                self.faded,
-                FontStyle {
-                    bold: false,
-                    italic: true,
-                    underline: false,
-                },
-            ),
-        )?;
+        write_scope(f, "comment", (self.faded, FontStyle::Italic))?;
 
         write_scope(f, "punctuation", (self.fg, 0xBB))?;
         write_scope(f, "operator", (self.fg, 0xBB))?;
         write_scope(f, "attribute", (self.fg, 0xBB))?;
 
-        write_scope(
-            f,
-            "*.mutable",
-            FontStyle {
-                italic: false,
-                bold: false,
-                underline: true,
-            },
-        )?;
+        write_scope(f, "*.mutable", FontStyle::Underline)?;
 
         writeln!(f, "\t}},")?;
 
@@ -288,35 +258,13 @@ impl Theme {
 
         write_textmate(f, &["entity.name.type", "keyword.type"], self.primary_accent)?;
 
-        write_textmate(
-            f,
-            &["entity.name.variable.enum-member"],
-            (
-                self.primary_accent,
-                FontStyle {
-                    bold: false,
-                    italic: true,
-                    underline: false,
-                },
-            ),
-        )?;
+        write_textmate(f, &["entity.name.variable.enum-member"], (self.primary_accent, FontStyle::Italic))?;
 
         write_textmate(f, &["constant.numeric", "string", "punctuation.definition.string"], self.secondary_accent1)?;
         write_textmate(f, &["entity.name.type.namespace"], self.fg)?;
         write_textmate(f, &["punctuation", "keyword.operator"], (self.fg, 0xBB))?;
 
-        write_textmate(
-            f,
-            &["comment", "punctuation.definition.comment"],
-            (
-                self.faded,
-                FontStyle {
-                    bold: false,
-                    italic: true,
-                    underline: false,
-                },
-            ),
-        )?;
+        write_textmate(f, &["comment", "punctuation.definition.comment"], (self.faded, FontStyle::Italic))?;
 
         writeln!(f, "\t],")?;
 
@@ -420,29 +368,19 @@ impl fmt::Display for Style {
 }
 
 #[derive(Copy, Clone)]
-struct FontStyle {
-    bold: bool,
-    italic: bool,
-    underline: bool,
+enum FontStyle {
+    Bold,
+    Italic,
+    Underline,
 }
 
 impl fmt::Display for FontStyle {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "\"")?;
-
-        if self.bold {
-            write!(f, "bold ")?;
+        match self {
+            Self::Bold => write!(f, "\"bold\""),
+            Self::Italic => write!(f, "\"italic\""),
+            Self::Underline => write!(f, "\"underline\""),
         }
-
-        if self.italic {
-            write!(f, "italic ")?;
-        }
-
-        if self.underline {
-            write!(f, "underline ")?;
-        }
-
-        write!(f, "\"")
     }
 }
 

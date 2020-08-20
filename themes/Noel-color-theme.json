@@ -146,7 +146,7 @@
 		"enum": "#B3DCE2",
 		"enumMember": {
 			"foreground": "#B3DCE2",
-			"fontStyle": "italic ",
+			"fontStyle": "italic",
 		},
 		"interface": "#B3DCE2",
 		"typeAlias": "#B3DCE2",
@@ -158,13 +158,13 @@
 		"string": "#66B9D2",
 		"comment": {
 			"foreground": "#526B6F",
-			"fontStyle": "italic ",
+			"fontStyle": "italic",
 		},
 		"punctuation": "#DEEEF3BB",
 		"operator": "#DEEEF3BB",
 		"attribute": "#DEEEF3BB",
 		"*.mutable": {
-			"fontStyle": "underline ",
+			"fontStyle": "underline",
 		},
 	},
 	"tokenColors": [
@@ -214,7 +214,7 @@
 			],
 			"settings": {
 			"foreground": "#B3DCE2",
-			"fontStyle": "italic ",
+			"fontStyle": "italic",
 		},
 		},
 		{
@@ -251,7 +251,7 @@
 			],
 			"settings": {
 			"foreground": "#526B6F",
-			"fontStyle": "italic ",
+			"fontStyle": "italic",
 		},
 		},
 	],
