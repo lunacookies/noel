@@ -179,7 +179,7 @@ impl fmt::Display for Theme {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         writeln!(f, "{{")?;
 
-        writeln!(f, "\t\"name\": {},", self.name)?;
+        writeln!(f, "\t\"name\": \"{}\",", self.name)?;
         writeln!(f, "\t\"type\": \"dark\",")?;
 
         self.workspace_colors(f)?;
