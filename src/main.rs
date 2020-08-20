@@ -271,7 +271,7 @@ impl Theme {
             },
         )?;
 
-        writeln!(f, "\t]")?;
+        writeln!(f, "\t],")?;
 
         Ok(())
     }
@@ -307,7 +307,7 @@ fn write_textmate(f: &mut fmt::Formatter<'_>, scopes: &[&str], style: impl Into<
     }
     writeln!(f, "\t\t\t],")?;
 
-    writeln!(f, "\t\t\t\"settings\": {:#}", style.into())?;
+    writeln!(f, "\t\t\t\"settings\": {:#},", style.into())?;
 
     writeln!(f, "\t\t}},")?;
 
@@ -332,13 +332,10 @@ impl fmt::Display for Style {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         if self.font_style.is_some() || f.alternate() {
             writeln!(f, "{{")?;
-            write!(f, "\t\t\t\"foreground\": {}", self.color)?;
+            writeln!(f, "\t\t\t\"foreground\": {},", self.color)?;
 
             if let Some(font_style) = self.font_style {
-                writeln!(f, ",")?;
-                writeln!(f, "\t\t\t\"fontStyle\": {}", font_style)?;
-            } else {
-                writeln!(f)?;
+                writeln!(f, "\t\t\t\"fontStyle\": {},", font_style)?;
             }
 
             write!(f, "\t\t\t}}")?;
