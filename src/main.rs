@@ -301,29 +301,11 @@ fn write_scope(f: &mut fmt::Formatter<'_>, key: &str, style: impl Into<Style>) -
 fn write_textmate(f: &mut fmt::Formatter<'_>, scopes: &[&str], style: impl Into<Style>) -> fmt::Result {
     writeln!(f, "\t\t{{")?;
 
-    write!(f, "\t\t\t\"scope\": ")?;
-
-    let num_scopes = scopes.len();
-
-    if num_scopes == 1 {
-        writeln!(f, "\"{}\",", scopes[0])?;
-    } else {
-        writeln!(f, "[")?;
-
-        let is_last = |idx| idx == num_scopes - 1;
-
-        for (idx, scope) in scopes.iter().enumerate() {
-            write!(f, "\t\t\t\t\"{}\"", scope)?;
-
-            if is_last(idx) {
-                writeln!(f)?;
-            } else {
-                writeln!(f, ",")?;
-            }
-        }
-
-        writeln!(f, "\t\t\t],")?;
+    writeln!(f, "\t\t\t\"scope\": [")?;
+    for scope in scopes {
+        writeln!(f, "\t\t\t\t\"{}\",", scope)?;
     }
+    writeln!(f, "\t\t\t],")?;
 
     writeln!(f, "\t\t\t\"settings\": {:#}", style.into())?;
 

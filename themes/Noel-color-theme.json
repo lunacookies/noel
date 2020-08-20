@@ -170,7 +170,7 @@
 				"keyword.control",
 				"storage.modifier",
 				"keyword.other.using",
-				"constant.language"
+				"constant.language",
 			],
 			"settings": {
 			"foreground": "#EEB9C1"
@@ -181,14 +181,16 @@
 				"variable",
 				"entity.name.variable",
 				"support.type.property-name",
-				"punctuation.support.type.property-name"
+				"punctuation.support.type.property-name",
 			],
 			"settings": {
 			"foreground": "#DEEEF3"
 			}
 		},
 		{
-			"scope": "entity.name.function",
+			"scope": [
+				"entity.name.function",
+			],
 			"settings": {
 			"foreground": "#66B9D2"
 			}
@@ -196,14 +198,16 @@
 		{
 			"scope": [
 				"entity.name.type",
-				"keyword.type"
+				"keyword.type",
 			],
 			"settings": {
 			"foreground": "#B3DCE2"
 			}
 		},
 		{
-			"scope": "entity.name.variable.enum-member",
+			"scope": [
+				"entity.name.variable.enum-member",
+			],
 			"settings": {
 			"foreground": "#B3DCE2",
 			"fontStyle": "italic"
@@ -213,14 +217,16 @@
 			"scope": [
 				"constant.numeric",
 				"string",
-				"punctuation.definition.string"
+				"punctuation.definition.string",
 			],
 			"settings": {
 			"foreground": "#66B9D2"
 			}
 		},
 		{
-			"scope": "entity.name.type.namespace",
+			"scope": [
+				"entity.name.type.namespace",
+			],
 			"settings": {
 			"foreground": "#DEEEF3"
 			}
@@ -228,7 +234,7 @@
 		{
 			"scope": [
 				"punctuation",
-				"keyword.operator"
+				"keyword.operator",
 			],
 			"settings": {
 			"foreground": "#DEEEF3BB"
@@ -237,7 +243,7 @@
 		{
 			"scope": [
 				"comment",
-				"punctuation.definition.comment"
+				"punctuation.definition.comment",
 			],
 			"settings": {
 			"foreground": "#526B6F",
