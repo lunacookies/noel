@@ -217,8 +217,12 @@ impl Theme {
             f,
             "enumMember",
             Style {
-                color: self.primary_accent.into(),
-                font_style: Some(FontStyle { italic: true, bold: false }),
+                color: Some(self.primary_accent.into()),
+                font_style: Some(FontStyle {
+                    bold: false,
+                    italic: true,
+                    underline: false,
+                }),
             },
         )?;
         write_scope(f, "interface", self.primary_accent)?;
@@ -237,14 +241,28 @@ impl Theme {
             f,
             "comment",
             Style {
-                color: self.faded.into(),
-                font_style: Some(FontStyle { italic: true, bold: false }),
+                color: Some(self.faded.into()),
+                font_style: Some(FontStyle {
+                    bold: false,
+                    italic: true,
+                    underline: false,
+                }),
             },
         )?;
 
         write_scope(f, "punctuation", (self.fg, 0xBB))?;
         write_scope(f, "operator", (self.fg, 0xBB))?;
         write_scope(f, "attribute", (self.fg, 0xBB))?;
+
+        write_scope(
+            f,
+            "*.mutable",
+            FontStyle {
+                italic: false,
+                bold: false,
+                underline: true,
+            },
+        )?;
 
         writeln!(f, "\t}},")?;
 
@@ -274,8 +292,12 @@ impl Theme {
             f,
             &["entity.name.variable.enum-member"],
             Style {
-                color: self.primary_accent.into(),
-                font_style: Some(FontStyle { italic: true, bold: false }),
+                color: Some(self.primary_accent.into()),
+                font_style: Some(FontStyle {
+                    bold: false,
+                    italic: true,
+                    underline: false,
+                }),
             },
         )?;
 
@@ -287,8 +309,12 @@ impl Theme {
             f,
             &["comment", "punctuation.definition.comment"],
             Style {
-                color: self.faded.into(),
-                font_style: Some(FontStyle { italic: true, bold: false }),
+                color: Some(self.faded.into()),
+                font_style: Some(FontStyle {
+                    bold: false,
+                    italic: true,
+                    underline: false,
+                }),
             },
         )?;
 
@@ -336,15 +362,24 @@ fn write_textmate(f: &mut fmt::Formatter<'_>, scopes: &[&str], style: impl Into<
 }
 
 struct Style {
-    color: Color,
+    color: Option<Color>,
     font_style: Option<FontStyle>,
 }
 
 impl<C: Into<Color>> From<C> for Style {
     fn from(color: C) -> Self {
         Self {
-            color: color.into(),
+            color: Some(color.into()),
             font_style: None,
+        }
+    }
+}
+
+impl From<FontStyle> for Style {
+    fn from(font_style: FontStyle) -> Self {
+        Self {
+            color: None,
+            font_style: Some(font_style),
         }
     }
 }
@@ -353,7 +388,10 @@ impl fmt::Display for Style {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         if self.font_style.is_some() || f.alternate() {
             writeln!(f, "{{")?;
-            writeln!(f, "\t\t\t\"foreground\": {},", self.color)?;
+
+            if let Some(color) = self.color {
+                writeln!(f, "\t\t\t\"foreground\": {},", color)?;
+            }
 
             if let Some(font_style) = self.font_style {
                 writeln!(f, "\t\t\t\"fontStyle\": {},", font_style)?;
@@ -361,30 +399,45 @@ impl fmt::Display for Style {
 
             write!(f, "\t\t\t}}")?;
 
-            Ok(())
+            return Ok(());
+        }
+
+        if let Some(color) = self.color {
+            write!(f, "{}", color)
         } else {
-            write!(f, "{}", self.color)
+            panic!("a Style must either have a font style or a color set");
         }
     }
 }
 
 #[derive(Copy, Clone)]
 struct FontStyle {
-    italic: bool,
     bold: bool,
+    italic: bool,
+    underline: bool,
 }
 
 impl fmt::Display for FontStyle {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        match (self.italic, self.bold) {
-            (true, true) => write!(f, "\"bold italic\""),
-            (false, true) => write!(f, "\"bold\""),
-            (true, false) => write!(f, "\"italic\""),
-            (false, false) => write!(f, "\"\""),
+        write!(f, "\"")?;
+
+        if self.bold {
+            write!(f, "bold ")?;
         }
+
+        if self.italic {
+            write!(f, "italic ")?;
+        }
+
+        if self.underline {
+            write!(f, "underline ")?;
+        }
+
+        write!(f, "\"")
     }
 }
 
+#[derive(Copy, Clone)]
 struct Color {
     rgb: Rgb,
     a: Option<u8>,
