@@ -1,7 +1,10 @@
-use std::fmt;
+use std::{fmt, fs, io};
 
-fn main() {
-    println!("{}", NOEL);
+fn main() -> io::Result<()> {
+    let path = format!("themes/{}-color-theme.json", NOEL.name);
+    let json = NOEL.to_string();
+
+    fs::write(path, json.as_bytes())
 }
 
 const NOEL: Theme = Theme {
@@ -271,7 +274,7 @@ impl Theme {
         writeln!(f, "\t]")?;
 
         Ok(())
-}
+    }
 }
 
 impl fmt::Display for Theme {
@@ -349,9 +352,9 @@ impl fmt::Display for Style {
             writeln!(f, "{{")?;
             write!(f, "\t\t\t\"foreground\": {}", self.color)?;
 
-        if let Some(font_style) = self.font_style {
+            if let Some(font_style) = self.font_style {
                 writeln!(f, ",")?;
-            writeln!(f, "\t\t\t\"fontStyle\": {}", font_style)?;
+                writeln!(f, "\t\t\t\"fontStyle\": {}", font_style)?;
             } else {
                 writeln!(f)?;
             }
