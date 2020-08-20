@@ -1,15 +1,3 @@
-// Palette:
-// Background: #2A3235
-// Darker background: #252B2D
-// Foreground: #DEEEF3
-// Darker foreground: #DEEEF3BB
-// Faded: #B3DCE255 or #526B6F where translucency is not allowed
-// Pink: #EEB9C1
-// Blue: #66B9D2
-// Light blue: #B3DCE2
-// Green: #8BB993
-// Red: #DC9E8F
-// Orange: #E7BEA6
 {
 	"name": "Noel",
 	"type": "dark",
@@ -140,10 +128,10 @@
 		"terminal.foreground": "#DEEEF3",
 		"textLink.activeForeground": "#66B9D2",
 		"textLink.foreground": "#66B9D2",
-		"textPreformat.foreground": "#EEB9C1", // Inline code on e.g. Settings page
+		"textPreformat.foreground": "#EEB9C1",
 		"titleBar.activeBackground": "#252B2D",
 		"titleBar.inactiveBackground": "#252B2D",
-		"window.activeBorder": "#B3DCE214"
+		"window.activeBorder": "#B3DCE214",
 	},
 	"semanticHighlighting": true,
 	"semanticTokenColors": {
@@ -158,8 +146,8 @@
 		"enum": "#B3DCE2",
 		"enumMember": {
 			"foreground": "#B3DCE2",
-			"italic": true
-		},
+			"fontStyle": "italic"
+			},
 		"interface": "#B3DCE2",
 		"typeAlias": "#B3DCE2",
 		"typeParameter": "#B3DCE2",
@@ -169,11 +157,11 @@
 		"number": "#66B9D2",
 		"string": "#66B9D2",
 		"comment": {
-			"foreground": "#B3DCE255",
-			"italic": true
-		},
+			"foreground": "#526B6F",
+			"fontStyle": "italic"
+			},
 		"punctuation": "#DEEEF3BB",
-		"operator": "#DEEEF3BB"
+		"operator": "#DEEEF3BB",
 	},
 	"tokenColors": [
 		{
@@ -185,7 +173,7 @@
 				"constant.language"
 			],
 			"settings": {
-				"foreground": "#EEB9C1"
+			"foreground": "#EEB9C1"
 			}
 		},
 		{
@@ -196,13 +184,13 @@
 				"punctuation.support.type.property-name"
 			],
 			"settings": {
-				"foreground": "#DEEEF3"
+			"foreground": "#DEEEF3"
 			}
 		},
 		{
 			"scope": "entity.name.function",
 			"settings": {
-				"foreground": "#66B9D2"
+			"foreground": "#66B9D2"
 			}
 		},
 		{
@@ -211,14 +199,14 @@
 				"keyword.type"
 			],
 			"settings": {
-				"foreground": "#B3DCE2"
+			"foreground": "#B3DCE2"
 			}
 		},
 		{
 			"scope": "entity.name.variable.enum-member",
 			"settings": {
-				"foreground": "#B3DCE2",
-				"fontStyle": "italic"
+			"foreground": "#B3DCE2",
+			"fontStyle": "italic"
 			}
 		},
 		{
@@ -228,13 +216,13 @@
 				"punctuation.definition.string"
 			],
 			"settings": {
-				"foreground": "#66B9D2"
+			"foreground": "#66B9D2"
 			}
 		},
 		{
 			"scope": "entity.name.type.namespace",
 			"settings": {
-				"foreground": "#DEEEF3"
+			"foreground": "#DEEEF3"
 			}
 		},
 		{
@@ -243,7 +231,7 @@
 				"keyword.operator"
 			],
 			"settings": {
-				"foreground": "#DEEEF3BB"
+			"foreground": "#DEEEF3BB"
 			}
 		},
 		{
@@ -252,9 +240,9 @@
 				"punctuation.definition.comment"
 			],
 			"settings": {
-				"foreground": "#B3DCE255",
-				"fontStyle": "italic"
+			"foreground": "#526B6F",
+			"fontStyle": "italic"
 			}
-		}
+		},
 	]
 }
