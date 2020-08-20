@@ -147,7 +147,7 @@
 		"enumMember": {
 			"foreground": "#B3DCE2",
 			"fontStyle": "italic ",
-			},
+		},
 		"interface": "#B3DCE2",
 		"typeAlias": "#B3DCE2",
 		"typeParameter": "#B3DCE2",
@@ -159,13 +159,13 @@
 		"comment": {
 			"foreground": "#526B6F",
 			"fontStyle": "italic ",
-			},
+		},
 		"punctuation": "#DEEEF3BB",
 		"operator": "#DEEEF3BB",
 		"attribute": "#DEEEF3BB",
 		"*.mutable": {
 			"fontStyle": "underline ",
-			},
+		},
 	},
 	"tokenColors": [
 		{
@@ -178,7 +178,7 @@
 			],
 			"settings": {
 			"foreground": "#EEB9C1",
-			},
+		},
 		},
 		{
 			"scope": [
@@ -189,7 +189,7 @@
 			],
 			"settings": {
 			"foreground": "#DEEEF3",
-			},
+		},
 		},
 		{
 			"scope": [
@@ -197,7 +197,7 @@
 			],
 			"settings": {
 			"foreground": "#66B9D2",
-			},
+		},
 		},
 		{
 			"scope": [
@@ -206,7 +206,7 @@
 			],
 			"settings": {
 			"foreground": "#B3DCE2",
-			},
+		},
 		},
 		{
 			"scope": [
@@ -215,7 +215,7 @@
 			"settings": {
 			"foreground": "#B3DCE2",
 			"fontStyle": "italic ",
-			},
+		},
 		},
 		{
 			"scope": [
@@ -225,7 +225,7 @@
 			],
 			"settings": {
 			"foreground": "#66B9D2",
-			},
+		},
 		},
 		{
 			"scope": [
@@ -233,7 +233,7 @@
 			],
 			"settings": {
 			"foreground": "#DEEEF3",
-			},
+		},
 		},
 		{
 			"scope": [
@@ -242,7 +242,7 @@
 			],
 			"settings": {
 			"foreground": "#DEEEF3BB",
-			},
+		},
 		},
 		{
 			"scope": [
@@ -252,7 +252,7 @@
 			"settings": {
 			"foreground": "#526B6F",
 			"fontStyle": "italic ",
-			},
+		},
 		},
 	],
 }

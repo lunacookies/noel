@@ -397,7 +397,7 @@ impl fmt::Display for Style {
                 writeln!(f, "\t\t\t\"fontStyle\": {},", font_style)?;
             }
 
-            write!(f, "\t\t\t}}")?;
+            write!(f, "\t\t}}")?;
 
             return Ok(());
         }
