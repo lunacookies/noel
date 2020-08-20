@@ -202,13 +202,10 @@ impl Theme {
         writeln!(f, "\t\"semanticTokenColors\": {{")?;
 
         write_scope(f, "keyword", self.secondary_accent2)?;
-
         write_scope(f, "boolean", self.secondary_accent2)?;
-
         write_scope(f, "variable", self.fg)?;
         write_scope(f, "property", self.fg)?;
         write_scope(f, "parameter", self.fg)?;
-
         write_scope(f, "type", self.primary_accent)?;
         write_scope(f, "class", self.primary_accent)?;
         write_scope(f, "struct", self.primary_accent)?;
@@ -218,20 +215,14 @@ impl Theme {
         write_scope(f, "typeAlias", self.primary_accent)?;
         write_scope(f, "typeParameter", self.primary_accent)?;
         write_scope(f, "builtinType", self.primary_accent)?;
-
         write_scope(f, "function", self.secondary_accent1)?;
-
         write_scope(f, "namespace", self.fg)?;
-
         write_scope(f, "number", self.secondary_accent1)?;
         write_scope(f, "string", self.secondary_accent1)?;
-
         write_scope(f, "comment", (self.faded, FontStyle::Italic))?;
-
         write_scope(f, "punctuation", (self.fg, 0xBB))?;
         write_scope(f, "operator", (self.fg, 0xBB))?;
         write_scope(f, "attribute", (self.fg, 0xBB))?;
-
         write_scope(f, "*.mutable", FontStyle::Underline)?;
 
         writeln!(f, "\t}},")?;
@@ -247,23 +238,17 @@ impl Theme {
             &["keyword", "keyword.control", "storage.modifier", "keyword.other.using", "constant.language"],
             self.secondary_accent2,
         )?;
-
         write_textmate(
             f,
             &["variable", "entity.name.variable", "support.type.property-name", "punctuation.support.type.property-name"],
             self.fg,
         )?;
-
         write_textmate(f, &["entity.name.function"], self.secondary_accent1)?;
-
         write_textmate(f, &["entity.name.type", "keyword.type"], self.primary_accent)?;
-
         write_textmate(f, &["entity.name.variable.enum-member"], (self.primary_accent, FontStyle::Italic))?;
-
         write_textmate(f, &["constant.numeric", "string", "punctuation.definition.string"], self.secondary_accent1)?;
         write_textmate(f, &["entity.name.type.namespace"], self.fg)?;
         write_textmate(f, &["punctuation", "keyword.operator"], (self.fg, 0xBB))?;
-
         write_textmate(f, &["comment", "punctuation.definition.comment"], (self.faded, FontStyle::Italic))?;
 
         writeln!(f, "\t],")?;
