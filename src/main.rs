@@ -1,10 +1,16 @@
 use std::{fmt, fs, io};
 
 fn main() -> io::Result<()> {
-    let path = format!("themes/{}-color-theme.json", NOEL.name);
-    let json = NOEL.to_string();
+    let themes = [NOEL, YURU];
 
-    fs::write(path, json.as_bytes())
+    for theme in &themes {
+        let path = format!("themes/{}-color-theme.json", theme.name);
+        let json = theme.to_string();
+
+        fs::write(path, json.as_bytes())?;
+    }
+
+    Ok(())
 }
 
 const NOEL: Theme = Theme {
@@ -19,6 +25,20 @@ const NOEL: Theme = Theme {
     primary_accent: Rgb(0xB3DCE2),
     secondary_accent1: Rgb(0x66B9D2),
     secondary_accent2: Rgb(0xEEB9C1),
+};
+
+const YURU: Theme = Theme {
+    name: "Yuru",
+    bg: Rgb(0x292525),
+    darker_bg: Rgb(0x252121),
+    fg: Rgb(0xE1DBD1),
+    faded: Rgb(0x5D5650),
+    red: Rgb(0xCC818E),
+    green: Rgb(0x91A872),
+    orange: Rgb(0xBE8B67),
+    primary_accent: Rgb(0xC4BAA9),
+    secondary_accent1: Rgb(0x88D4CC),
+    secondary_accent2: Rgb(0xCC818E),
 };
 
 const INVISIBLE: Color = Color { rgb: Rgb(0x000000), a: Some(0x00) };

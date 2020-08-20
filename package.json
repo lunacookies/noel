@@ -19,6 +19,11 @@
                 "label": "Noel",
                 "uiTheme": "vs-dark",
                 "path": "./themes/Noel-color-theme.json"
+            },
+            {
+                "label": "Yuru",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Yuru-color-theme.json"
             }
         ]
     }
