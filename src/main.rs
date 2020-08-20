@@ -226,6 +226,52 @@ impl Theme {
 
         Ok(())
     }
+
+    fn textmate_highlighting(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        writeln!(f, "\t\"tokenColors\": [")?;
+
+        write_textmate(
+            f,
+            &["keyword", "keyword.control", "storage.modifier", "keyword.other.using", "constant.language"],
+            self.secondary_accent2,
+        )?;
+
+        write_textmate(
+            f,
+            &["variable", "entity.name.variable", "support.type.property-name", "punctuation.support.type.property-name"],
+            self.fg,
+        )?;
+
+        write_textmate(f, &["entity.name.function"], self.secondary_accent1)?;
+
+        write_textmate(f, &["entity.name.type", "keyword.type"], self.primary_accent)?;
+
+        write_textmate(
+            f,
+            &["entity.name.variable.enum-member"],
+            Style {
+                color: self.primary_accent.into(),
+                font_style: Some(FontStyle { italic: true, bold: false }),
+            },
+        )?;
+
+        write_textmate(f, &["constant.numeric", "string", "punctuation.definition.string"], self.secondary_accent1)?;
+        write_textmate(f, &["entity.name.type.namespace"], self.fg)?;
+        write_textmate(f, &["punctuation", "keyword.operator"], (self.fg, 0xBB))?;
+
+        write_textmate(
+            f,
+            &["comment", "punctuation.definition.comment"],
+            Style {
+                color: self.faded.into(),
+                font_style: Some(FontStyle { italic: true, bold: false }),
+            },
+        )?;
+
+        writeln!(f, "\t]")?;
+
+        Ok(())
+}
 }
 
 impl fmt::Display for Theme {
@@ -237,8 +283,9 @@ impl fmt::Display for Theme {
 
         self.workspace_colors(f)?;
         self.semantic_highlighting(f)?;
+        self.textmate_highlighting(f)?;
 
-        writeln!(f, "}}")?;
+        write!(f, "}}")?;
 
         Ok(())
     }
@@ -246,6 +293,40 @@ impl fmt::Display for Theme {
 
 fn write_scope(f: &mut fmt::Formatter<'_>, key: &str, style: impl Into<Style>) -> fmt::Result {
     writeln!(f, "\t\t\"{}\": {},", key, style.into())
+}
+
+fn write_textmate(f: &mut fmt::Formatter<'_>, scopes: &[&str], style: impl Into<Style>) -> fmt::Result {
+    writeln!(f, "\t\t{{")?;
+
+    write!(f, "\t\t\t\"scope\": ")?;
+
+    let num_scopes = scopes.len();
+
+    if num_scopes == 1 {
+        writeln!(f, "\"{}\",", scopes[0])?;
+    } else {
+        writeln!(f, "[")?;
+
+        let is_last = |idx| idx == num_scopes - 1;
+
+        for (idx, scope) in scopes.iter().enumerate() {
+            write!(f, "\t\t\t\t\"{}\"", scope)?;
+
+            if is_last(idx) {
+                writeln!(f)?;
+            } else {
+                writeln!(f, ",")?;
+            }
+        }
+
+        writeln!(f, "\t\t\t],")?;
+    }
+
+    writeln!(f, "\t\t\t\"settings\": {:#}", style.into())?;
+
+    writeln!(f, "\t\t}},")?;
+
+    Ok(())
 }
 
 struct Style {
@@ -264,11 +345,18 @@ impl<C: Into<Color>> From<C> for Style {
 
 impl fmt::Display for Style {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        if let Some(font_style) = self.font_style {
+        if self.font_style.is_some() || f.alternate() {
             writeln!(f, "{{")?;
-            writeln!(f, "\t\t\t\"foreground\": {},", self.color)?;
+            write!(f, "\t\t\t\"foreground\": {}", self.color)?;
+
+        if let Some(font_style) = self.font_style {
+                writeln!(f, ",")?;
             writeln!(f, "\t\t\t\"fontStyle\": {}", font_style)?;
-            write!(f, "\t\t}}")?;
+            } else {
+                writeln!(f)?;
+            }
+
+            write!(f, "\t\t\t}}")?;
 
             Ok(())
         } else {
