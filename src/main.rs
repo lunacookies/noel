@@ -78,7 +78,7 @@ impl Theme {
         write_scope(f, "editor.foreground", self.fg)?;
         write_scope(f, "editor.lineHighlightBackground", (self.primary_accent, 0x0D))?;
         write_scope(f, "editor.rangeHighlightBackground", (self.primary_accent, 0x22))?;
-        write_scope(f, "editor.selectionBackground", (self.primary_accent, 0x33))?;
+        write_scope(f, "editor.selectionBackground", (self.primary_accent, 0x22))?;
         write_scope(f, "editor.wordHighlightBackground", (self.primary_accent, 0x33))?;
         write_scope(f, "editorCodeLens.foreground", (self.primary_accent, 0x55))?;
         write_scope(f, "editorCursor.foreground", self.fg)?;

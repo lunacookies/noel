@@ -19,7 +19,7 @@
 		"editor.foreground": "#DEEEF3",
 		"editor.lineHighlightBackground": "#B3DCE20D",
 		"editor.rangeHighlightBackground": "#B3DCE222",
-		"editor.selectionBackground": "#B3DCE233",
+		"editor.selectionBackground": "#B3DCE222",
 		"editor.wordHighlightBackground": "#B3DCE233",
 		"editorCodeLens.foreground": "#B3DCE255",
 		"editorCursor.foreground": "#DEEEF3",
