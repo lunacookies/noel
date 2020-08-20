@@ -288,7 +288,7 @@ impl fmt::Display for Theme {
         self.semantic_highlighting(f)?;
         self.textmate_highlighting(f)?;
 
-        write!(f, "}}")?;
+        writeln!(f, "}}")?;
 
         Ok(())
     }
