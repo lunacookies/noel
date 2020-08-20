@@ -169,7 +169,60 @@ impl Theme {
         write_scope(f, "titleBar.inactiveBackground", self.darker_bg)?;
         write_scope(f, "window.activeBorder", (self.primary_accent, 0x14))?;
 
-        writeln!(f, "\t}}")?;
+        writeln!(f, "\t}},")?;
+
+        Ok(())
+    }
+
+    fn semantic_highlighting(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        writeln!(f, "\t\"semanticHighlighting\": true,")?;
+        writeln!(f, "\t\"semanticTokenColors\": {{")?;
+
+        write_scope(f, "keyword", self.secondary_accent2)?;
+
+        write_scope(f, "boolean", self.secondary_accent2)?;
+
+        write_scope(f, "variable", self.fg)?;
+        write_scope(f, "property", self.fg)?;
+        write_scope(f, "parameter", self.fg)?;
+
+        write_scope(f, "type", self.primary_accent)?;
+        write_scope(f, "class", self.primary_accent)?;
+        write_scope(f, "struct", self.primary_accent)?;
+        write_scope(f, "enum", self.primary_accent)?;
+        write_scope(
+            f,
+            "enumMember",
+            Style {
+                color: self.primary_accent.into(),
+                font_style: Some(FontStyle { italic: true, bold: false }),
+            },
+        )?;
+        write_scope(f, "interface", self.primary_accent)?;
+        write_scope(f, "typeAlias", self.primary_accent)?;
+        write_scope(f, "typeParameter", self.primary_accent)?;
+        write_scope(f, "builtinType", self.primary_accent)?;
+
+        write_scope(f, "function", self.secondary_accent1)?;
+
+        write_scope(f, "namespace", self.fg)?;
+
+        write_scope(f, "number", self.secondary_accent1)?;
+        write_scope(f, "string", self.secondary_accent1)?;
+
+        write_scope(
+            f,
+            "comment",
+            Style {
+                color: self.faded.into(),
+                font_style: Some(FontStyle { italic: true, bold: false }),
+            },
+        )?;
+
+        write_scope(f, "punctuation", (self.fg, 0xBB))?;
+        write_scope(f, "operator", (self.fg, 0xBB))?;
+
+        writeln!(f, "\t}},")?;
 
         Ok(())
     }
@@ -183,6 +236,7 @@ impl fmt::Display for Theme {
         writeln!(f, "\t\"type\": \"dark\",")?;
 
         self.workspace_colors(f)?;
+        self.semantic_highlighting(f)?;
 
         writeln!(f, "}}")?;
 
@@ -212,9 +266,9 @@ impl fmt::Display for Style {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         if let Some(font_style) = self.font_style {
             writeln!(f, "{{")?;
-            writeln!(f, "\t\t\t\"foreground\": {}", self.color)?;
+            writeln!(f, "\t\t\t\"foreground\": {},", self.color)?;
             writeln!(f, "\t\t\t\"fontStyle\": {}", font_style)?;
-            writeln!(f, "\t\t}}")?;
+            write!(f, "\t\t}}")?;
 
             Ok(())
         } else {
