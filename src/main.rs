@@ -76,6 +76,7 @@ impl Theme {
         write_scope(f, "editor.findMatchBackground", (self.secondary_accent1, 0x77))?;
         write_scope(f, "editor.findMatchHighlightBackground", (self.secondary_accent1, 0x44))?;
         write_scope(f, "editor.foreground", self.fg)?;
+        write_scope(f, "editor.hoverHighlightBackground", (self.primary_accent, 0x44))?;
         write_scope(f, "editor.lineHighlightBackground", (self.primary_accent, 0x0D))?;
         write_scope(f, "editor.rangeHighlightBackground", (self.primary_accent, 0x22))?;
         write_scope(f, "editor.selectionBackground", (self.primary_accent, 0x22))?;
