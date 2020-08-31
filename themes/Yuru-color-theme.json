@@ -93,7 +93,7 @@
 		"peekViewTitleLabel.foreground": "#E1DBD1",
 		"problemsErrorIcon.foreground": "#CC818E",
 		"problemsWarningIcon.foreground": "#BE8B67",
-		"rust_analyzer.inlayHint": "#C4BAA955",
+		"rust_analyzer.inlayHints.foreground": "#C4BAA955",
 		"scrollbarSlider.background": "#C4BAA922",
 		"selection.background": "#C4BAA944",
 		"settings.headerForeground": "#E1DBD1",

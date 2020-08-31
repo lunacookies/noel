@@ -152,7 +152,7 @@ impl Theme {
         write_scope(f, "peekViewTitleLabel.foreground", self.fg)?;
         write_scope(f, "problemsErrorIcon.foreground", self.red)?;
         write_scope(f, "problemsWarningIcon.foreground", self.orange)?;
-        write_scope(f, "rust_analyzer.inlayHint", (self.primary_accent, 0x55))?;
+        write_scope(f, "rust_analyzer.inlayHints.foreground", (self.primary_accent, 0x55))?;
         write_scope(f, "scrollbarSlider.background", (self.primary_accent, 0x22))?;
         write_scope(f, "selection.background", (self.primary_accent, 0x44))?;
         write_scope(f, "settings.headerForeground", self.fg)?;
