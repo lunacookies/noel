@@ -220,7 +220,7 @@ impl Theme {
         write_scope(f, "namespace", self.fg)?;
         write_scope(f, "number", self.secondary_accent1)?;
         write_scope(f, "string", self.secondary_accent1)?;
-        write_scope(f, "comment", (self.fg, FontStyle::Bold))?;
+        write_scope(f, "comment", (self.faded, FontStyle::Italic))?;
         write_scope(f, "punctuation", (self.fg, 0xBB))?;
         write_scope(f, "operator", (self.fg, 0xBB))?;
         write_scope(f, "attribute", (self.fg, 0xBB))?;

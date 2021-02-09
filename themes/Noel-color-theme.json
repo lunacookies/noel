@@ -158,8 +158,8 @@
 		"number": "#66B9D2",
 		"string": "#66B9D2",
 		"comment": {
-			"foreground": "#DEEEF3",
-			"fontStyle": "bold",
+			"foreground": "#526B6F",
+			"fontStyle": "italic",
 		},
 		"punctuation": "#DEEEF3BB",
 		"operator": "#DEEEF3BB",
