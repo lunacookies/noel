@@ -41,6 +41,7 @@
 		"terminalCursor.foreground": "#D7CACA",
 		"editorCursor.background": "#272323",
 		"terminalCursor.background": "#272323",
+		"focusBorder": "#524A4A",
 		"rust_analyzer.inlayHints.foreground": "#766C6C"
 	},
 	"semanticHighlighting": true,
