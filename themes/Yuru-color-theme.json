@@ -50,6 +50,10 @@
 			"foreground": "#CC818E",
 			"fontStyle": ""
 		},
+		"builtinType": {
+			"foreground": "#CC818E",
+			"fontStyle": ""
+		},
 		"function": {
 			"foreground": "#88D4CC",
 			"fontStyle": ""
@@ -87,10 +91,6 @@
 			"fontStyle": ""
 		},
 		"typeAlias": {
-			"foreground": "#C4BAA9",
-			"fontStyle": ""
-		},
-		"builtinType": {
 			"foreground": "#C4BAA9",
 			"fontStyle": ""
 		},

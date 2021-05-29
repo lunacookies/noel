@@ -64,6 +64,7 @@ fn syntax_highlighting(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
     builder.add_rules(
         &[
             Semantic("keyword"),
+            Semantic("builtinType"),
             Textmate("keyword"),
             Textmate("storage"),
             Textmate("variable.language.this"),
@@ -88,7 +89,6 @@ fn syntax_highlighting(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
             Semantic("interface"),
             Semantic("typeParameter"),
             Semantic("typeAlias"),
-            Semantic("builtinType"),
             Textmate("entity.name.type"),
             Textmate("storage.type"),
         ],
