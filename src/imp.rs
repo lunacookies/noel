@@ -19,6 +19,8 @@ fn workspace_colors(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
     builder.add_workspace_rule("editorLineNumber.foreground", scheme.base(BaseScale::FadedFg));
     builder.add_workspace_rule("editorLineNumber.activeForeground", scheme.base(BaseScale::Fg));
 
+    builder.add_workspace_rule("editorWidget.background", scheme.base(BaseScale::DarkBg));
+
     builder.add_workspace_rules(&["activityBar.background", "sideBar.background"], scheme.base(BaseScale::DarkBg));
     builder.add_workspace_rule("activityBar.foreground", scheme.base(BaseScale::Fg));
     builder.add_workspace_rule("activityBar.inactiveForeground", scheme.base(BaseScale::FadedFg));

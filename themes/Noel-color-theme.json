@@ -10,6 +10,7 @@
 		"editor.selectionBackground": "#474D4F",
 		"editorLineNumber.foreground": "#697073",
 		"editorLineNumber.activeForeground": "#C4D0D4",
+		"editorWidget.background": "#1A1D1E",
 		"activityBar.background": "#1A1D1E",
 		"sideBar.background": "#1A1D1E",
 		"activityBar.foreground": "#C4D0D4",
