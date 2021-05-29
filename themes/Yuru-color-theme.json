@@ -7,7 +7,9 @@
 		"editor.foreground": "#E1DBD1",
 		"foreground": "#E1DBD1",
 		"activityBar.background": "#252121",
-		"sideBar.background": "#252121"
+		"sideBar.background": "#252121",
+		"activityBar.foreground": "#E1DBD1",
+		"activityBar.inactiveForeground": "#5D5650"
 	},
 	"semanticHighlighting": true,
 	"semanticTokenColors": {

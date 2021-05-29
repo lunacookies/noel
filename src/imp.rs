@@ -13,6 +13,8 @@ fn workspace_colors(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
     builder.add_workspace_rules(&["editor.foreground", "foreground"], scheme.base(BaseScale::Fg));
 
     builder.add_workspace_rules(&["activityBar.background", "sideBar.background"], scheme.base(BaseScale::DarkBg));
+    builder.add_workspace_rule("activityBar.foreground", scheme.base(BaseScale::Fg));
+    builder.add_workspace_rule("activityBar.inactiveForeground", scheme.base(BaseScale::Faded));
 }
 
 fn syntax_highlighting(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
