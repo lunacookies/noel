@@ -93,6 +93,10 @@
 			"foreground": "#88D4CC",
 			"fontStyle": ""
 		},
+		"characterLiteral": {
+			"foreground": "#88D4CC",
+			"fontStyle": ""
+		},
 		"boolean": {
 			"foreground": "#88D4CC",
 			"fontStyle": ""
