@@ -8,6 +8,7 @@ pub(crate) trait Scheme {
         let value = match scale {
             BaseScale::DarkBg => 0.0,
             BaseScale::Bg => 0.05,
+            BaseScale::LightBg => 0.1,
             BaseScale::FadedFg => 0.5,
             BaseScale::Fg => 1.0,
         };
@@ -23,6 +24,7 @@ pub(crate) trait Scheme {
 pub(crate) enum BaseScale {
     DarkBg,
     Bg,
+    LightBg,
     FadedFg,
     Fg,
 }
