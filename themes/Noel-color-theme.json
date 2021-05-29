@@ -5,7 +5,9 @@
 	"colors": {
 		"editor.background": "#2A3235",
 		"editor.foreground": "#DEEEF3",
-		"foreground": "#DEEEF3"
+		"foreground": "#DEEEF3",
+		"activityBar.background": "#252B2D",
+		"sideBar.background": "#252B2D"
 	},
 	"semanticHighlighting": true,
 	"semanticTokenColors": {

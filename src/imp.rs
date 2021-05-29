@@ -11,6 +11,8 @@ pub(crate) fn add_rules(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
 fn workspace_colors(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
     builder.add_workspace_rule("editor.background", scheme.base(BaseScale::Bg));
     builder.add_workspace_rules(&["editor.foreground", "foreground"], scheme.base(BaseScale::Fg));
+
+    builder.add_workspace_rules(&["activityBar.background", "sideBar.background"], scheme.base(BaseScale::DarkBg));
 }
 
 fn syntax_highlighting(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
