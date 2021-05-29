@@ -61,9 +61,22 @@ fn workspace_colors(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
 }
 
 fn syntax_highlighting(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
-    builder.add_rule(Semantic("keyword"), scheme.keyword());
+    builder.add_rules(
+        &[
+            Semantic("keyword"),
+            Textmate("keyword"),
+            Textmate("storage"),
+            Textmate("variable.language.this"),
+            Textmate("storage.type.primitive"),
+            Textmate("storage.type.local.java"),
+            Textmate("storage.type.js"),
+            Textmate("storage.type.rust"),
+            Textmate("storage.type.class.js"),
+        ],
+        scheme.keyword(),
+    );
 
-    builder.add_rules(&[Semantic("function"), Semantic("method")], scheme.function());
+    builder.add_rules(&[Semantic("function"), Semantic("method"), Textmate("entity.name.function")], scheme.function());
 
     builder.add_rules(
         &[
@@ -76,12 +89,27 @@ fn syntax_highlighting(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
             Semantic("typeParameter"),
             Semantic("typeAlias"),
             Semantic("builtinType"),
+            Textmate("entity.name.type"),
+            Textmate("storage.type"),
         ],
         scheme.ty(),
     );
     builder.add_rule(Semantic("enumMember"), (scheme.ty(), FontStyle::Italic));
 
-    builder.add_rules(&[Semantic("string"), Semantic("number"), Semantic("characterLiteral"), Semantic("boolean")], scheme.data());
+    builder.add_rules(
+        &[
+            Semantic("string"),
+            Textmate("string"),
+            Semantic("number"),
+            Textmate("constant.numeric"),
+            Semantic("characterLiteral"),
+            Semantic("boolean"),
+            Textmate("constant.language"),
+        ],
+        scheme.data(),
+    );
 
     builder.add_rule(Semantic("comment"), (scheme.base(BaseScale::FadedFg), FontStyle::Italic));
+
+    builder.add_rule(Textmate("keyword.operator"), scheme.base(BaseScale::Fg));
 }
