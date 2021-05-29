@@ -32,4 +32,8 @@ impl Scheme for Yuru {
     fn ty(&self) -> Oklch {
         self.brown()
     }
+
+    fn data(&self) -> Oklch {
+        self.cyan()
+    }
 }

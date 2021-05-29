@@ -20,6 +20,7 @@ pub(crate) trait Scheme {
     fn keyword(&self) -> Oklch;
     fn function(&self) -> Oklch;
     fn ty(&self) -> Oklch;
+    fn data(&self) -> Oklch;
 }
 
 pub(crate) enum BaseScale {

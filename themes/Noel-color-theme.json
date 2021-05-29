@@ -84,6 +84,18 @@
 			"foreground": "#B3DCE2",
 			"italic": true
 		},
+		"string": {
+			"foreground": "#66B9D2",
+			"fontStyle": ""
+		},
+		"number": {
+			"foreground": "#66B9D2",
+			"fontStyle": ""
+		},
+		"boolean": {
+			"foreground": "#66B9D2",
+			"fontStyle": ""
+		},
 		"comment": {
 			"foreground": "#697073",
 			"italic": true

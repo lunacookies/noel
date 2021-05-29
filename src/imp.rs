@@ -62,5 +62,7 @@ fn syntax_highlighting(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
     );
     builder.add_rule(Semantic("enumMember"), (scheme.ty(), FontStyle::Italic));
 
+    builder.add_rules(&[Semantic("string"), Semantic("number"), Semantic("boolean")], scheme.data());
+
     builder.add_rule(Semantic("comment"), (scheme.base(BaseScale::FadedFg), FontStyle::Italic));
 }

@@ -32,4 +32,8 @@ impl Scheme for Noel {
     fn ty(&self) -> Oklch {
         self.light_blue()
     }
+
+    fn data(&self) -> Oklch {
+        self.blue()
+    }
 }
