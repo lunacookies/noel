@@ -1,5 +1,5 @@
-use super::oklch;
-use crate::scheme::{BaseScale, Scheme};
+use crate::scheme::Scheme;
+use crate::utils::oklch;
 use tincture::Oklch;
 
 pub(crate) struct Noel;
@@ -19,14 +19,7 @@ impl Noel {
 }
 
 impl Scheme for Noel {
-    fn base(&self, scale: BaseScale) -> tincture::Oklch {
-        match scale {
-            BaseScale::DarkBg => oklch(0.2840086, 0.009262296, 219.91037),
-            BaseScale::Bg => oklch(0.3107568, 0.012263376, 222.50056),
-            BaseScale::Faded => oklch(0.5093168, 0.030170973, 208.38818),
-            BaseScale::Fg => oklch(0.9386827, 0.018355545, 218.56363),
-        }
-    }
+    const BASE_SCALE_HUE: f32 = 220.0;
 
     fn keyword(&self) -> Oklch {
         self.pink()

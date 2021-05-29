@@ -1,6 +1,7 @@
 mod imp;
 mod scheme;
 mod themes;
+mod utils;
 
 use mottle::theme::{ThemeBuilder, Type};
 use std::io;

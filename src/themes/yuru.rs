@@ -1,5 +1,5 @@
-use super::oklch;
-use crate::scheme::{BaseScale, Scheme};
+use crate::scheme::Scheme;
+use crate::utils::oklch;
 use tincture::Oklch;
 
 pub(crate) struct Yuru;
@@ -19,24 +19,17 @@ impl Yuru {
 }
 
 impl Scheme for Yuru {
-    fn base(&self, scale: BaseScale) -> tincture::Oklch {
-        match scale {
-            BaseScale::DarkBg => oklch(0.25222087, 0.006081627, 17.378693),
-            BaseScale::Bg => oklch(0.2688568, 0.0059769503, 17.330532),
-            BaseScale::Faded => oklch(0.45792902, 0.013222907, 63.070595),
-            BaseScale::Fg => oklch(0.8934077, 0.014947208, 80.69393),
-        }
-    }
+    const BASE_SCALE_HUE: f32 = 15.0;
 
-    fn keyword(&self) -> tincture::Oklch {
+    fn keyword(&self) -> Oklch {
         self.red()
     }
 
-    fn function(&self) -> tincture::Oklch {
+    fn function(&self) -> Oklch {
         self.cyan()
     }
 
-    fn ty(&self) -> tincture::Oklch {
+    fn ty(&self) -> Oklch {
         self.brown()
     }
 }

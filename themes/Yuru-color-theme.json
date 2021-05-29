@@ -3,24 +3,24 @@
 	"name": "Yuru",
 	"type": "dark",
 	"colors": {
-		"editor.background": "#292525",
-		"editor.foreground": "#E1DBD1",
-		"foreground": "#E1DBD1",
-		"editorLineNumber.foreground": "#5D5650",
-		"editorLineNumber.activeForeground": "#E1DBD1",
-		"activityBar.background": "#252121",
-		"sideBar.background": "#252121",
-		"activityBar.foreground": "#E1DBD1",
-		"activityBar.inactiveForeground": "#5D5650",
-		"tab.inactiveBackground": "#252121",
-		"tab.border": "#252121",
-		"tab.activeForeground": "#E1DBD1",
-		"tab.inactiveForeground": "#5D5650",
-		"editorGroupHeader.tabsBackground": "#252121",
-		"editorGroupHeader.noTabsBackground": "#252121",
-		"editorIndentGuide.background": "#5D5650",
-		"tree.indentGuidesStroke": "#5D5650",
-		"editorIndentGuide.activeBackground": "#5D5650"
+		"editor.background": "#362F2F",
+		"editor.foreground": "#EAD9DA",
+		"foreground": "#EAD9DA",
+		"editorLineNumber.foreground": "#857A7A",
+		"editorLineNumber.activeForeground": "#EAD9DA",
+		"activityBar.background": "#2E2727",
+		"sideBar.background": "#2E2727",
+		"activityBar.foreground": "#EAD9DA",
+		"activityBar.inactiveForeground": "#857A7A",
+		"tab.inactiveBackground": "#2E2727",
+		"tab.border": "#2E2727",
+		"tab.activeForeground": "#EAD9DA",
+		"tab.inactiveForeground": "#857A7A",
+		"editorGroupHeader.tabsBackground": "#2E2727",
+		"editorGroupHeader.noTabsBackground": "#2E2727",
+		"editorIndentGuide.background": "#857A7A",
+		"tree.indentGuidesStroke": "#857A7A",
+		"editorIndentGuide.activeBackground": "#857A7A"
 	},
 	"semanticHighlighting": true,
 	"semanticTokenColors": {
@@ -77,7 +77,7 @@
 			"italic": true
 		},
 		"comment": {
-			"foreground": "#5D5650",
+			"foreground": "#857A7A",
 			"italic": true
 		}
 	},
