@@ -3,10 +3,11 @@
   "displayName": "Noel",
   "description": "A VS Code theme based on the colours of the GMK Noel keycaps",
   "publisher": "arzg",
+  "license": "MIT",
   "repository": {
     "url": "https://github.com/arzg/noel"
   },
-  "version": "0.2.6",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.47.0"
   },
