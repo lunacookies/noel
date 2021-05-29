@@ -26,6 +26,15 @@ fn workspace_colors(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
     builder.add_workspace_rule("tab.inactiveForeground", scheme.base(BaseScale::FadedFg));
     builder.add_workspace_rules(&["editorGroupHeader.tabsBackground", "editorGroupHeader.noTabsBackground"], scheme.base(BaseScale::DarkBg));
 
+    builder.add_workspace_rules(
+        &["statusBar.background", "statusBar.debuggingBackground", "statusBar.noFolderBackground"],
+        scheme.base(BaseScale::DarkBg),
+    );
+    builder.add_workspace_rules(
+        &["statusBar.foreground", "statusBar.debuggingForeground", "statusBar.noFolderForeground"],
+        scheme.base(BaseScale::FadedFg),
+    );
+
     builder.add_workspace_rules(&["editorIndentGuide.background", "tree.indentGuidesStroke"], scheme.base(BaseScale::FadedFg));
     builder.add_workspace_rule("editorIndentGuide.activeBackground", scheme.base(BaseScale::FadedFg));
 }

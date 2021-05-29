@@ -19,6 +19,12 @@
 		"tab.inactiveForeground": "#857A7A",
 		"editorGroupHeader.tabsBackground": "#2E2727",
 		"editorGroupHeader.noTabsBackground": "#2E2727",
+		"statusBar.background": "#2E2727",
+		"statusBar.debuggingBackground": "#2E2727",
+		"statusBar.noFolderBackground": "#2E2727",
+		"statusBar.foreground": "#857A7A",
+		"statusBar.debuggingForeground": "#857A7A",
+		"statusBar.noFolderForeground": "#857A7A",
 		"editorIndentGuide.background": "#857A7A",
 		"tree.indentGuidesStroke": "#857A7A",
 		"editorIndentGuide.activeBackground": "#857A7A"
