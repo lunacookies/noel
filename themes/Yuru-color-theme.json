@@ -15,7 +15,10 @@
 		"tab.activeForeground": "#E1DBD1",
 		"tab.inactiveForeground": "#5D5650",
 		"editorGroupHeader.tabsBackground": "#252121",
-		"editorGroupHeader.noTabsBackground": "#252121"
+		"editorGroupHeader.noTabsBackground": "#252121",
+		"editorIndentGuide.background": "#5D5650",
+		"tree.indentGuidesStroke": "#5D5650",
+		"editorIndentGuide.activeBackground": "#5D5650"
 	},
 	"semanticHighlighting": true,
 	"semanticTokenColors": {

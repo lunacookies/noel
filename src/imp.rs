@@ -20,6 +20,9 @@ fn workspace_colors(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
     builder.add_workspace_rule("tab.activeForeground", scheme.base(BaseScale::Fg));
     builder.add_workspace_rule("tab.inactiveForeground", scheme.base(BaseScale::Faded));
     builder.add_workspace_rules(&["editorGroupHeader.tabsBackground", "editorGroupHeader.noTabsBackground"], scheme.base(BaseScale::DarkBg));
+
+    builder.add_workspace_rules(&["editorIndentGuide.background", "tree.indentGuidesStroke"], scheme.base(BaseScale::Faded));
+    builder.add_workspace_rule("editorIndentGuide.activeBackground", scheme.base(BaseScale::Faded));
 }
 
 fn syntax_highlighting(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
