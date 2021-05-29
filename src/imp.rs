@@ -21,6 +21,13 @@ fn workspace_colors(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
 
     builder.add_workspace_rule("editorWidget.background", scheme.base(BaseScale::DarkBg));
 
+    builder.add_workspace_rule("list.hoverBackground", scheme.base(BaseScale::Bg));
+    builder.add_workspace_rules(
+        &["list.focusBackground", "list.activeSelectionBackground", "list.inactiveSelectionBackground"],
+        scheme.base(BaseScale::LightBg),
+    );
+    builder.add_workspace_rule("list.activeSelectionForeground", scheme.base(BaseScale::Fg));
+
     builder.add_workspace_rules(&["activityBar.background", "sideBar.background"], scheme.base(BaseScale::DarkBg));
     builder.add_workspace_rule("activityBar.foreground", scheme.base(BaseScale::Fg));
     builder.add_workspace_rule("activityBar.inactiveForeground", scheme.base(BaseScale::FadedFg));
