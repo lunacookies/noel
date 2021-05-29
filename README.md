@@ -4,8 +4,6 @@ A pack of VS Code themes based on the colours of the [GMK Noel](https://gmknoel.
 
 The font in the screenshot is [JetBrains Mono](https://jetbrains.com/mono) Regular.
 
-Matching iTerm presets for each of the themes are included with this repository.
-
 ## Noel
 
 ![](https://raw.githubusercontent.com/arzg/resources/master/noel.png)
