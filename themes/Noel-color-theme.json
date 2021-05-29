@@ -36,6 +36,10 @@
 		"tree.indentGuidesStroke": "#454E50",
 		"editorIndentGuide.activeBackground": "#677174",
 		"editorCodeLens.foreground": "#677174",
+		"editorCursor.foreground": "#C4D0D4",
+		"terminalCursor.foreground": "#C4D0D4",
+		"editorCursor.background": "#222526",
+		"terminalCursor.background": "#222526",
 		"rust_analyzer.inlayHints.foreground": "#677174"
 	},
 	"semanticHighlighting": true,

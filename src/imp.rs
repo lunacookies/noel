@@ -51,6 +51,9 @@ fn workspace_colors(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
 
     builder.add_workspace_rule("editorCodeLens.foreground", scheme.base(BaseScale::FadedFg));
 
+    builder.add_workspace_rules(&["editorCursor.foreground", "terminalCursor.foreground"], scheme.base(BaseScale::Fg));
+    builder.add_workspace_rules(&["editorCursor.background", "terminalCursor.background"], scheme.base(BaseScale::Bg));
+
     builder.add_workspace_rule("rust_analyzer.inlayHints.foreground", scheme.base(BaseScale::FadedFg));
 }
 
