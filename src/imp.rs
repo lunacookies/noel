@@ -39,6 +39,8 @@ fn workspace_colors(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
 
     builder.add_workspace_rules(&["editorIndentGuide.background", "tree.indentGuidesStroke"], scheme.base(BaseScale::BrightBg));
     builder.add_workspace_rule("editorIndentGuide.activeBackground", scheme.base(BaseScale::FadedFg));
+
+    builder.add_workspace_rule("rust_analyzer.inlayHints.foreground", scheme.base(BaseScale::FadedFg));
 }
 
 fn syntax_highlighting(builder: &mut ThemeBuilder, scheme: &impl Scheme) {

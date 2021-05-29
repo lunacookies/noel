@@ -28,7 +28,8 @@
 		"statusBar.noFolderForeground": "#746C6D",
 		"editorIndentGuide.background": "#504A4A",
 		"tree.indentGuidesStroke": "#504A4A",
-		"editorIndentGuide.activeBackground": "#746C6D"
+		"editorIndentGuide.activeBackground": "#746C6D",
+		"rust_analyzer.inlayHints.foreground": "#746C6D"
 	},
 	"semanticHighlighting": true,
 	"semanticTokenColors": {
