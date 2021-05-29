@@ -9,7 +9,13 @@
 		"activityBar.background": "#252121",
 		"sideBar.background": "#252121",
 		"activityBar.foreground": "#E1DBD1",
-		"activityBar.inactiveForeground": "#5D5650"
+		"activityBar.inactiveForeground": "#5D5650",
+		"tab.inactiveBackground": "#252121",
+		"tab.border": "#252121",
+		"tab.activeForeground": "#E1DBD1",
+		"tab.inactiveForeground": "#5D5650",
+		"editorGroupHeader.tabsBackground": "#252121",
+		"editorGroupHeader.noTabsBackground": "#252121"
 	},
 	"semanticHighlighting": true,
 	"semanticTokenColors": {
