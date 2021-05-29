@@ -24,6 +24,8 @@ pub(crate) trait Scheme {
         oklch(lightness, chroma, Self::BASE_SCALE_HUE)
     }
 
+    fn accent(&self) -> Oklch;
+
     fn keyword(&self) -> Oklch;
     fn function(&self) -> Oklch;
     fn ty(&self) -> Oklch;

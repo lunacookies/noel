@@ -21,6 +21,10 @@ impl Yuru {
 impl Scheme for Yuru {
     const BASE_SCALE_HUE: f32 = 15.0;
 
+    fn accent(&self) -> Oklch {
+        self.red()
+    }
+
     fn keyword(&self) -> Oklch {
         self.red()
     }

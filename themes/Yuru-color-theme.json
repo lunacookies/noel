@@ -16,6 +16,7 @@
 		"list.activeSelectionBackground": "#312A2A",
 		"list.inactiveSelectionBackground": "#312A2A",
 		"list.activeSelectionForeground": "#D7CACA",
+		"list.highlightForeground": "#CC818E",
 		"activityBar.background": "#1F1C1C",
 		"sideBar.background": "#1F1C1C",
 		"activityBar.foreground": "#D7CACA",

@@ -21,6 +21,10 @@ impl Noel {
 impl Scheme for Noel {
     const BASE_SCALE_HUE: f32 = 220.0;
 
+    fn accent(&self) -> Oklch {
+        self.blue()
+    }
+
     fn keyword(&self) -> Oklch {
         self.pink()
     }
