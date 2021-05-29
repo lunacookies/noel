@@ -7,14 +7,14 @@ pub(crate) trait Scheme {
     fn base(&self, scale: BaseScale) -> Oklch {
         let value = match scale {
             BaseScale::DarkBg => 0.0,
-            BaseScale::Bg => 0.05,
-            BaseScale::LightBg => 0.1,
+            BaseScale::Bg => 0.03,
+            BaseScale::LightBg => 0.07,
             BaseScale::BrightBg => 0.3,
             BaseScale::FadedFg => 0.5,
             BaseScale::Fg => 1.0,
         };
 
-        let lightness = lerp(value, 0.23..0.85);
+        let lightness = lerp(value, 0.24..0.85);
 
         let chroma = match scale {
             BaseScale::Bg | BaseScale::DarkBg => 0.005,
