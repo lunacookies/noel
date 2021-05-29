@@ -14,6 +14,8 @@ fn workspace_colors(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
 
     builder.add_workspace_rule("editor.lineHighlightBackground", scheme.base(BaseScale::LightBg));
 
+    builder.add_workspace_rule("editor.selectionBackground", scheme.base(BaseScale::BrightBg));
+
     builder.add_workspace_rule("editorLineNumber.foreground", scheme.base(BaseScale::FadedFg));
     builder.add_workspace_rule("editorLineNumber.activeForeground", scheme.base(BaseScale::Fg));
 

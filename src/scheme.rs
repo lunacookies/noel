@@ -9,6 +9,7 @@ pub(crate) trait Scheme {
             BaseScale::DarkBg => 0.0,
             BaseScale::Bg => 0.05,
             BaseScale::LightBg => 0.1,
+            BaseScale::BrightBg => 0.4,
             BaseScale::FadedFg => 0.5,
             BaseScale::Fg => 1.0,
         };
@@ -25,6 +26,7 @@ pub(crate) enum BaseScale {
     DarkBg,
     Bg,
     LightBg,
+    BrightBg,
     FadedFg,
     Fg,
 }
