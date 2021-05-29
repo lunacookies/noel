@@ -14,7 +14,7 @@ pub(crate) trait Scheme {
             BaseScale::Fg => 1.0,
         };
 
-        oklch(lerp(value, 0.28..0.9), lerp(value, 0.01..0.018), Self::BASE_SCALE_HUE)
+        oklch(lerp(value, 0.23..0.85), lerp(value, 0.005..0.015), Self::BASE_SCALE_HUE)
     }
 
     fn keyword(&self) -> Oklch;
