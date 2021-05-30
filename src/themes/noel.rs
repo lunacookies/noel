@@ -1,4 +1,6 @@
+use crate::scheme::BaseScale;
 use crate::scheme::Scheme;
+use crate::utils::lerp;
 use crate::utils::oklch;
 use tincture::Oklch;
 
@@ -19,7 +21,15 @@ impl Noel {
 }
 
 impl Scheme for Noel {
-    const BASE_SCALE_HUE: f32 = 220.0;
+    const BASE_SCALE_HUE: f32 = 230.0;
+
+    fn base_lightness(&self, scale: BaseScale) -> f32 {
+        lerp(scale.value(), 0.3..0.9)
+    }
+
+    fn base_chroma(&self, scale: BaseScale) -> f32 {
+        lerp(scale.value(), 0.012..0.015)
+    }
 
     fn accent(&self) -> Oklch {
         self.blue()

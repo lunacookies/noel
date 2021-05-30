@@ -1,28 +1,14 @@
-use crate::utils::{lerp, oklch};
+use crate::utils::oklch;
 use tincture::Oklch;
 
 pub(crate) trait Scheme {
     const BASE_SCALE_HUE: f32;
 
     fn base(&self, scale: BaseScale) -> Oklch {
-        let value = match scale {
-            BaseScale::DarkBg => 0.0,
-            BaseScale::Bg => 0.03,
-            BaseScale::LightBg => 0.07,
-            BaseScale::BrightBg => 0.3,
-            BaseScale::FadedFg => 0.5,
-            BaseScale::Fg => 1.0,
-        };
-
-        let lightness = lerp(value, 0.24..0.85);
-
-        let chroma = match scale {
-            BaseScale::Bg | BaseScale::DarkBg => 0.005,
-            _ => lerp(value, 0.01..0.015),
-        };
-
-        oklch(lightness, chroma, Self::BASE_SCALE_HUE)
+        oklch(self.base_lightness(scale), self.base_chroma(scale), Self::BASE_SCALE_HUE)
     }
+    fn base_lightness(&self, scale: BaseScale) -> f32;
+    fn base_chroma(&self, scale: BaseScale) -> f32;
 
     fn accent(&self) -> Oklch;
 
@@ -32,6 +18,7 @@ pub(crate) trait Scheme {
     fn data(&self) -> Oklch;
 }
 
+#[derive(Clone, Copy)]
 pub(crate) enum BaseScale {
     DarkBg,
     Bg,
@@ -39,4 +26,17 @@ pub(crate) enum BaseScale {
     BrightBg,
     FadedFg,
     Fg,
+}
+
+impl BaseScale {
+    pub(crate) fn value(self) -> f32 {
+        match self {
+            Self::DarkBg => 0.0,
+            Self::Bg => 0.03,
+            Self::LightBg => 0.07,
+            Self::BrightBg => 0.3,
+            Self::FadedFg => 0.5,
+            Self::Fg => 1.0,
+        }
+    }
 }

@@ -1,4 +1,6 @@
+use crate::scheme::BaseScale;
 use crate::scheme::Scheme;
+use crate::utils::lerp;
 use crate::utils::oklch;
 use tincture::Oklch;
 
@@ -20,6 +22,14 @@ impl Yuru {
 
 impl Scheme for Yuru {
     const BASE_SCALE_HUE: f32 = 15.0;
+
+    fn base_lightness(&self, scale: BaseScale) -> f32 {
+        lerp(scale.value(), 0.27..0.9)
+    }
+
+    fn base_chroma(&self, scale: BaseScale) -> f32 {
+        lerp(scale.value(), 0.006..0.015)
+    }
 
     fn accent(&self) -> Oklch {
         self.red()
