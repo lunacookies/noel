@@ -116,4 +116,26 @@ fn syntax_highlighting(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
     builder.add_rule(Semantic("comment"), (scheme.base(BaseScale::FadedFg), FontStyle::Italic));
 
     builder.add_rule(Textmate("keyword.operator"), scheme.base(BaseScale::Fg));
+
+    builder.add_rule(Textmate("markup.heading"), FontStyle::Bold);
+    builder.add_rules(
+        &[
+            Textmate("fenced_code.block.language"),
+            Textmate("punctuation.definition.bold.markdown"),
+            Textmate("punctuation.definition.constant.markdown"),
+            Textmate("punctuation.definition.heading.markdown"),
+            Textmate("punctuation.definition.italic.markdown"),
+            Textmate("punctuation.definition.list.markdown"),
+            Textmate("punctuation.definition.markdown"),
+            Textmate("punctuation.definition.metadata.markdown"),
+            Textmate("punctuation.definition.quote.begin.markdown"),
+            Textmate("punctuation.definition.quote.markdown"),
+            Textmate("punctuation.definition.raw.markdown"),
+            Textmate("punctuation.definition.string.begin.markdown"),
+            Textmate("punctuation.definition.string.end.markdown"),
+            Textmate("punctuation.separator.key-value.markdown"),
+        ],
+        scheme.function(),
+    );
+    builder.add_rules(&[Textmate("markup.inline.raw.string.markdown"), Textmate("markup.fenced_code.block.markdown")], scheme.keyword());
 }

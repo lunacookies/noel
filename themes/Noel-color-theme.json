@@ -228,6 +228,124 @@
 				"foreground": "#D5E0E6",
 				"fontStyle": ""
 			}
+		},
+		{
+			"scope": "markup.heading",
+			"settings": {
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"scope": "fenced_code.block.language",
+			"settings": {
+				"foreground": "#66B9D2",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "punctuation.definition.bold.markdown",
+			"settings": {
+				"foreground": "#66B9D2",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "punctuation.definition.constant.markdown",
+			"settings": {
+				"foreground": "#66B9D2",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "punctuation.definition.heading.markdown",
+			"settings": {
+				"foreground": "#66B9D2",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "punctuation.definition.italic.markdown",
+			"settings": {
+				"foreground": "#66B9D2",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "punctuation.definition.list.markdown",
+			"settings": {
+				"foreground": "#66B9D2",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "punctuation.definition.markdown",
+			"settings": {
+				"foreground": "#66B9D2",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "punctuation.definition.metadata.markdown",
+			"settings": {
+				"foreground": "#66B9D2",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "punctuation.definition.quote.begin.markdown",
+			"settings": {
+				"foreground": "#66B9D2",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "punctuation.definition.quote.markdown",
+			"settings": {
+				"foreground": "#66B9D2",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "punctuation.definition.raw.markdown",
+			"settings": {
+				"foreground": "#66B9D2",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "punctuation.definition.string.begin.markdown",
+			"settings": {
+				"foreground": "#66B9D2",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "punctuation.definition.string.end.markdown",
+			"settings": {
+				"foreground": "#66B9D2",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "punctuation.separator.key-value.markdown",
+			"settings": {
+				"foreground": "#66B9D2",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "markup.inline.raw.string.markdown",
+			"settings": {
+				"foreground": "#EEB9C1",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "markup.fenced_code.block.markdown",
+			"settings": {
+				"foreground": "#EEB9C1",
+				"fontStyle": ""
+			}
 		}
 	]
 }
