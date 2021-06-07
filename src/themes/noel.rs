@@ -30,7 +30,7 @@ impl Scheme for Noel {
     fn base_chroma(&self, scale: BaseScale) -> f32 {
         match scale {
             BaseScale::DarkBg | BaseScale::Bg | BaseScale::Fg => 0.012,
-            _ => lerp(scale.value(), 0.015..0.04),
+            _ => lerp(scale.value(), 0.014..0.04),
         }
     }
 
