@@ -227,6 +227,13 @@
 			}
 		},
 		{
+			"scope": "comment",
+			"settings": {
+				"foreground": "#82797A",
+				"fontStyle": "italic"
+			}
+		},
+		{
 			"scope": "keyword.operator",
 			"settings": {
 				"foreground": "#E8DADB",

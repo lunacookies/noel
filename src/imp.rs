@@ -116,7 +116,7 @@ fn syntax_highlighting(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
         scheme.data(),
     );
 
-    builder.add_rule(Semantic("comment"), (scheme.base(BaseScale::FadedFg), FontStyle::Italic));
+    builder.add_rules(&[Semantic("comment"), Textmate("comment")], (scheme.base(BaseScale::FadedFg), FontStyle::Italic));
 
     builder.add_rule(Textmate("keyword.operator"), scheme.base(BaseScale::Fg));
 
