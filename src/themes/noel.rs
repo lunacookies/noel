@@ -21,14 +21,17 @@ impl Noel {
 }
 
 impl Scheme for Noel {
-    const BASE_SCALE_HUE: f32 = 230.0;
+    const BASE_SCALE_HUE: f32 = 235.0;
 
     fn base_lightness(&self, scale: BaseScale) -> f32 {
         lerp(scale.value(), 0.3..0.9)
     }
 
     fn base_chroma(&self, scale: BaseScale) -> f32 {
-        lerp(scale.value(), 0.012..0.015)
+        match scale {
+            BaseScale::DarkBg | BaseScale::Bg | BaseScale::Fg => 0.012,
+            _ => lerp(scale.value(), 0.015..0.04),
+        }
     }
 
     fn strong_accent(&self) -> Oklch {
