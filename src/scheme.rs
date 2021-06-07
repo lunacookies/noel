@@ -24,6 +24,7 @@ pub(crate) enum BaseScale {
     Bg,
     LightBg,
     BrightBg,
+    BrighterBg,
     FadedFg,
     Fg,
 }
@@ -34,7 +35,8 @@ impl BaseScale {
             Self::DarkBg => 0.0,
             Self::Bg => 0.03,
             Self::LightBg => 0.07,
-            Self::BrightBg => 0.3,
+            Self::BrightBg => 0.2,
+            Self::BrighterBg => 0.3,
             Self::FadedFg => 0.5,
             Self::Fg => 1.0,
         }
