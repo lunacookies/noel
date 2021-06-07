@@ -31,8 +31,12 @@ impl Scheme for Noel {
         lerp(scale.value(), 0.012..0.015)
     }
 
-    fn accent(&self) -> Oklch {
+    fn strong_accent(&self) -> Oklch {
         self.blue()
+    }
+
+    fn light_accent(&self) -> Oklch {
+        self.light_blue()
     }
 
     fn keyword(&self) -> Oklch {

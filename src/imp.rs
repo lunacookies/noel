@@ -27,13 +27,13 @@ fn workspace_colors(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
         scheme.base(BaseScale::LightBg),
     );
     builder.add_workspace_rule("list.activeSelectionForeground", scheme.base(BaseScale::Fg));
-    builder.add_workspace_rule("list.highlightForeground", scheme.accent());
+    builder.add_workspace_rule("list.highlightForeground", scheme.strong_accent());
 
     builder.add_workspace_rules(&["activityBar.background", "sideBar.background"], scheme.base(BaseScale::DarkBg));
     builder.add_workspace_rule("activityBar.foreground", scheme.base(BaseScale::Fg));
     builder.add_workspace_rule("activityBar.inactiveForeground", scheme.base(BaseScale::FadedFg));
 
-    builder.add_workspace_rules(&["badge.background", "activityBarBadge.background"], scheme.accent());
+    builder.add_workspace_rules(&["badge.background", "activityBarBadge.background"], scheme.light_accent());
     builder.add_workspace_rules(&["badge.foreground", "activityBarBadge.foreground"], scheme.base(BaseScale::Bg));
 
     builder.add_workspace_rules(&["tab.inactiveBackground", "tab.border"], scheme.base(BaseScale::DarkBg));

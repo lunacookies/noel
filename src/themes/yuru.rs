@@ -31,8 +31,12 @@ impl Scheme for Yuru {
         lerp(scale.value(), 0.006..0.015)
     }
 
-    fn accent(&self) -> Oklch {
+    fn strong_accent(&self) -> Oklch {
         self.red()
+    }
+
+    fn light_accent(&self) -> Oklch {
+        self.cyan()
     }
 
     fn keyword(&self) -> Oklch {

@@ -10,7 +10,8 @@ pub(crate) trait Scheme {
     fn base_lightness(&self, scale: BaseScale) -> f32;
     fn base_chroma(&self, scale: BaseScale) -> f32;
 
-    fn accent(&self) -> Oklch;
+    fn strong_accent(&self) -> Oklch;
+    fn light_accent(&self) -> Oklch;
 
     fn keyword(&self) -> Oklch;
     fn function(&self) -> Oklch;
