@@ -24,6 +24,10 @@ pub(crate) trait Scheme {
     fn ansi_blue(&self) -> Oklch;
     fn ansi_magenta(&self) -> Oklch;
     fn ansi_cyan(&self) -> Oklch;
+
+    fn added(&self) -> Oklch;
+    fn modified(&self) -> Oklch;
+    fn deleted(&self) -> Oklch;
 }
 
 #[derive(Clone, Copy)]

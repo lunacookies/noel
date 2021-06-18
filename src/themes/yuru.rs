@@ -90,4 +90,16 @@ impl Scheme for Yuru {
     fn ansi_cyan(&self) -> Oklch {
         self.cyan()
     }
+
+    fn added(&self) -> Oklch {
+        self.green()
+    }
+
+    fn modified(&self) -> Oklch {
+        self.brown()
+    }
+
+    fn deleted(&self) -> Oklch {
+        self.red()
+    }
 }

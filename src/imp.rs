@@ -73,6 +73,34 @@ fn workspace_colors(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
     builder.add_workspace_rule("terminal.ansiWhite", scheme.base(BaseScale::Fg));
     builder.add_workspace_rule("terminal.ansiBrightWhite", scheme.base(BaseScale::Fg));
 
+    builder.add_workspace_rules(
+        &[
+            "gitDecoration.addedResourceForeground",
+            "editorGutter.addedBackground",
+            "editorOverviewRuler.addedForeground",
+            "minimapGutter.addedBackground",
+        ],
+        scheme.added(),
+    );
+    builder.add_workspace_rules(
+        &[
+            "gitDecoration.modifiedResourceForeground",
+            "editorGutter.modifiedBackground",
+            "editorOverviewRuler.modifiedForeground",
+            "minimapGutter.modifiedBackground",
+        ],
+        scheme.modified(),
+    );
+    builder.add_workspace_rules(
+        &[
+            "gitDecoration.deletedResourceForeground",
+            "editorGutter.deletedBackground",
+            "editorOverviewRuler.deletedForeground",
+            "minimapGutter.deletedBackground",
+        ],
+        scheme.deleted(),
+    );
+
     builder.add_workspace_rule("focusBorder", scheme.base(BaseScale::BrighterBg));
 
     builder.add_workspace_rule("rust_analyzer.inlayHints.foreground", scheme.base(BaseScale::FadedFg));

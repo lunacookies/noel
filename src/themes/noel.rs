@@ -94,4 +94,16 @@ impl Scheme for Noel {
     fn ansi_cyan(&self) -> Oklch {
         self.light_blue()
     }
+
+    fn added(&self) -> Oklch {
+        self.green()
+    }
+
+    fn modified(&self) -> Oklch {
+        self.yellow()
+    }
+
+    fn deleted(&self) -> Oklch {
+        self.red()
+    }
 }
