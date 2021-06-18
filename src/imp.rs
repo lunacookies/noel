@@ -84,6 +84,8 @@ fn syntax_highlighting(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
         scheme.keyword(),
     );
 
+    builder.add_rules(&[Semantic("variable"), Textmate("variable")], scheme.base(BaseScale::Fg));
+
     builder.add_rules(&[Semantic("function"), Semantic("method"), Textmate("entity.name.function")], scheme.function());
 
     builder.add_rules(

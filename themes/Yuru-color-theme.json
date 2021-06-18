@@ -62,6 +62,10 @@
 			"foreground": "#CC818E",
 			"fontStyle": ""
 		},
+		"variable": {
+			"foreground": "#E8DADB",
+			"fontStyle": ""
+		},
 		"function": {
 			"foreground": "#88D4CC",
 			"fontStyle": ""
@@ -181,6 +185,13 @@
 			"scope": "storage.type.class.js",
 			"settings": {
 				"foreground": "#CC818E",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "variable",
+			"settings": {
+				"foreground": "#E8DADB",
 				"fontStyle": ""
 			}
 		},
