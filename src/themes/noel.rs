@@ -11,6 +11,18 @@ impl Noel {
         oklch(0.8355564, 0.06198207, 8.320043)
     }
 
+    fn red(&self) -> Oklch {
+        oklch(0.75, 0.09, 35.0)
+    }
+
+    fn yellow(&self) -> Oklch {
+        oklch(0.8, 0.06, 80.0)
+    }
+
+    fn green(&self) -> Oklch {
+        oklch(0.75, 0.09, 140.0)
+    }
+
     fn light_blue(&self) -> Oklch {
         oklch(0.8672051, 0.043651294, 207.3837)
     }
@@ -57,5 +69,29 @@ impl Scheme for Noel {
 
     fn data(&self) -> Oklch {
         self.blue()
+    }
+
+    fn ansi_red(&self) -> Oklch {
+        self.red()
+    }
+
+    fn ansi_green(&self) -> Oklch {
+        self.green()
+    }
+
+    fn ansi_yellow(&self) -> Oklch {
+        self.yellow()
+    }
+
+    fn ansi_blue(&self) -> Oklch {
+        self.blue()
+    }
+
+    fn ansi_magenta(&self) -> Oklch {
+        self.pink()
+    }
+
+    fn ansi_cyan(&self) -> Oklch {
+        self.light_blue()
     }
 }

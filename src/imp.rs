@@ -62,6 +62,17 @@ fn workspace_colors(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
     builder.add_workspace_rules(&["editorCursor.foreground", "terminalCursor.foreground"], scheme.base(BaseScale::Fg));
     builder.add_workspace_rules(&["editorCursor.background", "terminalCursor.background"], scheme.base(BaseScale::Bg));
 
+    builder.add_workspace_rules(&["terminal.ansiRed", "terminal.ansiBrightRed"], scheme.ansi_red());
+    builder.add_workspace_rules(&["terminal.ansiGreen", "terminal.ansiBrightGreen"], scheme.ansi_green());
+    builder.add_workspace_rules(&["terminal.ansiYellow", "terminal.ansiBrightYellow"], scheme.ansi_yellow());
+    builder.add_workspace_rules(&["terminal.ansiBlue", "terminal.ansiBrightBlue"], scheme.ansi_blue());
+    builder.add_workspace_rules(&["terminal.ansiMagenta", "terminal.ansiBrightMagenta"], scheme.ansi_magenta());
+    builder.add_workspace_rules(&["terminal.ansiCyan", "terminal.ansiBrightCyan"], scheme.ansi_cyan());
+    builder.add_workspace_rule("terminal.ansiBlack", scheme.base(BaseScale::LightBg));
+    builder.add_workspace_rule("terminal.ansiBrightBlack", scheme.base(BaseScale::FadedFg));
+    builder.add_workspace_rule("terminal.ansiWhite", scheme.base(BaseScale::Fg));
+    builder.add_workspace_rule("terminal.ansiBrightWhite", scheme.base(BaseScale::Fg));
+
     builder.add_workspace_rule("focusBorder", scheme.base(BaseScale::BrighterBg));
 
     builder.add_workspace_rule("rust_analyzer.inlayHints.foreground", scheme.base(BaseScale::FadedFg));
