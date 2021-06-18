@@ -8,11 +8,11 @@ pub(crate) struct Yuru;
 
 impl Yuru {
     fn red(&self) -> Oklch {
-        oklch(0.68488437, 0.09384193, 8.52984)
+        oklch(0.7, 0.09, 9.0)
     }
 
     fn brown(&self) -> Oklch {
-        oklch(0.7924896, 0.025996776, 81.10153)
+        oklch(0.8, 0.03, 80.0)
     }
 
     fn green(&self) -> Oklch {
@@ -20,7 +20,7 @@ impl Yuru {
     }
 
     fn cyan(&self) -> Oklch {
-        oklch(0.81816167, 0.07638612, 187.41963)
+        oklch(0.8, 0.08, 185.0)
     }
 
     fn blue(&self) -> Oklch {

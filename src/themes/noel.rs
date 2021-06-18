@@ -8,7 +8,7 @@ pub(crate) struct Noel;
 
 impl Noel {
     fn pink(&self) -> Oklch {
-        oklch(0.8355564, 0.06198207, 8.320043)
+        oklch(0.8, 0.06, 8.0)
     }
 
     fn red(&self) -> Oklch {
@@ -24,11 +24,11 @@ impl Noel {
     }
 
     fn light_blue(&self) -> Oklch {
-        oklch(0.8672051, 0.043651294, 207.3837)
+        oklch(0.85, 0.04, 205.0)
     }
 
     fn blue(&self) -> Oklch {
-        oklch(0.7425923, 0.08841091, 219.68378)
+        oklch(0.75, 0.09, 220.0)
     }
 }
 
