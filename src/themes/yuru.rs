@@ -40,7 +40,7 @@ impl Scheme for Yuru {
     }
 
     fn base_chroma(&self, scale: BaseScale) -> f32 {
-        lerp(scale.value(), 0.006..0.015)
+        lerp(scale.value(), 0.006..0.01)
     }
 
     fn strong_accent(&self) -> Oklch {
