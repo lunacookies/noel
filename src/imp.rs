@@ -21,6 +21,8 @@ fn workspace_colors(builder: &mut ThemeBuilder, scheme: &impl Scheme) {
 
     builder.add_workspace_rule("editorWidget.background", scheme.base(BaseScale::DarkBg));
 
+    builder.add_workspace_rules(&["input.background", "checkbox.background", "dropdown.background"], scheme.base(BaseScale::DarkerBg));
+
     builder.add_workspace_rule("list.hoverBackground", scheme.base(BaseScale::Bg));
     builder.add_workspace_rules(
         &["list.focusBackground", "list.activeSelectionBackground", "list.inactiveSelectionBackground"],

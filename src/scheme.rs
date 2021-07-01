@@ -32,6 +32,7 @@ pub(crate) trait Scheme {
 
 #[derive(Clone, Copy)]
 pub(crate) enum BaseScale {
+    DarkerBg,
     DarkBg,
     Bg,
     LightBg,
@@ -44,9 +45,10 @@ pub(crate) enum BaseScale {
 impl BaseScale {
     pub(crate) fn value(self) -> f32 {
         match self {
-            Self::DarkBg => 0.0,
-            Self::Bg => 0.03,
-            Self::LightBg => 0.07,
+            Self::DarkerBg => 0.0,
+            Self::DarkBg => 0.03,
+            Self::Bg => 0.06,
+            Self::LightBg => 0.1,
             Self::BrightBg => 0.2,
             Self::BrighterBg => 0.3,
             Self::FadedFg => 0.5,
