@@ -33,17 +33,16 @@ impl Noel {
 }
 
 impl Scheme for Noel {
-    const BASE_SCALE_HUE: f32 = 235.0;
+    const BASE_SCALE_HUE: f32 = 230.0;
 
     fn base_lightness(&self, scale: BaseScale) -> f32 {
-        lerp(scale.value(), 0.28..0.9)
+        lerp(scale.value(), 0.27..0.9)
     }
 
     fn base_chroma(&self, scale: BaseScale) -> f32 {
         match scale {
-            BaseScale::DarkBg | BaseScale::Bg => 0.013,
             BaseScale::Fg => 0.02,
-            _ => lerp(scale.value(), 0.014..0.04),
+            _ => lerp(scale.value(), 0.015..0.04),
         }
     }
 

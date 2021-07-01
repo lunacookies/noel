@@ -46,9 +46,9 @@ impl BaseScale {
     pub(crate) fn value(self) -> f32 {
         match self {
             Self::DarkerBg => 0.0,
-            Self::DarkBg => 0.03,
-            Self::Bg => 0.06,
-            Self::LightBg => 0.1,
+            Self::DarkBg => 0.05,
+            Self::Bg => 0.09,
+            Self::LightBg => 0.12,
             Self::BrightBg => 0.2,
             Self::BrighterBg => 0.3,
             Self::FadedFg => 0.5,
