@@ -7,7 +7,7 @@
   "repository": {
     "url": "https://github.com/arzg/noel"
   },
-  "version": "2.0.0",
+  "version": "2.1.0",
   "engines": {
     "vscode": "^1.47.0"
   },
