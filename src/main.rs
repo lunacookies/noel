@@ -236,7 +236,16 @@ impl Theme {
 
         write_textmate(
             f,
-            &["keyword", "keyword.control", "storage.modifier", "keyword.other.using", "constant.language"],
+            &[
+                "keyword",
+                "keyword.control",
+                "storage.modifier",
+                "storage.type",
+                "keyword.other.using",
+                "constant.language",
+                "support.type.primitive",
+                "entity.name.tag.html"
+            ],
             self.secondary_accent2,
         )?;
         write_textmate(
@@ -245,7 +254,7 @@ impl Theme {
             self.fg,
         )?;
         write_textmate(f, &["entity.name.function"], self.secondary_accent1)?;
-        write_textmate(f, &["entity.name.type", "keyword.type"], self.primary_accent)?;
+        write_textmate(f, &["entity.name.type", "keyword.type", "meta.property-value.css"], self.primary_accent)?;
         write_textmate(f, &["entity.name.variable.enum-member"], (self.primary_accent, FontStyle::Italic))?;
         write_textmate(f, &["constant.numeric", "string", "punctuation.definition.string"], self.secondary_accent1)?;
         write_textmate(f, &["entity.name.type.namespace"], self.fg)?;
