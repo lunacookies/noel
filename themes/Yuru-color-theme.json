@@ -177,6 +177,8 @@
 				"storage.type",
 				"keyword.other.using",
 				"constant.language",
+				"support.type.primitive",
+				"entity.name.tag.html",
 			],
 			"settings": {
 			"foreground": "#CC818E",
@@ -205,7 +207,7 @@
 			"scope": [
 				"entity.name.type",
 				"keyword.type",
-				"support.constant"
+				"meta.property-value.css",
 			],
 			"settings": {
 			"foreground": "#C4BAA9",

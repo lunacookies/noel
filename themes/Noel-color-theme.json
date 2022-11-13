@@ -177,6 +177,8 @@
 				"storage.type",
 				"keyword.other.using",
 				"constant.language",
+				"support.type.primitive",
+				"entity.name.tag.html",
 			],
 			"settings": {
 			"foreground": "#EEB9C1",
@@ -205,11 +207,11 @@
 			"scope": [
 				"entity.name.type",
 				"keyword.type",
-				"support.constant"
+				"meta.property-value.css",
 			],
 			"settings": {
-				"foreground": "#B3DCE2",
-			},
+			"foreground": "#B3DCE2",
+		},
 		},
 		{
 			"scope": [
